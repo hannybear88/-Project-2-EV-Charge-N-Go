@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS evChargeNGo_db; 
+CREATE DATABASE evChargeNGo_db; 
+
