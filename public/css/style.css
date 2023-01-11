@@ -1,0 +1,58 @@
+:root {
+  --primary-dark: #373D20;
+  --primary-medium: #a3a380;
+  --primary-light: #efebce;
+  --tumbleweed: #d8a48f;
+  --old-rose: #bb8588;
+  --black: black;
+  --white: white;
+  --boader-radius: 10px;
+}
+
+.jumbotron {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.title {
+  background-color: var(--primary-medium);
+  color: var(--white);
+  border-radius: var(--boader-radius) var(--boader-radius) 0 0;
+}
+
+.title a {
+  color: var(--white);
+}
+
+
+.login-form,
+.signup-form,
+.edit-form,
+.new-form,
+.content {
+  border: 1px solid var(--primary-medium);
+  border-radius: 0 0 var(--boader-radius) var(--boader-radius);
+  background-color: var(--primary-light);
+}
+
+.trimmed-content {
+  border-left: 2px solid var(--primary-medium);
+  border-right: 2px solid var(--primary-medium);
+}
+
+.comment-by {
+  background-color: var(--primary-light);
+}
+
+.sub-heading {
+  color: var(--primary-dark);
+}
+
+#btn-add-new-post {
+  background-color: var(--primary-medium);
+  color: var(--white);
+}
+
+#btn-add-new-post:hover {
+  background-color: var(--primary-dark);
+}
