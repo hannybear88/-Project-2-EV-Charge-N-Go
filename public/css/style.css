@@ -56,3 +56,9 @@
 #btn-add-new-post:hover {
   background-color: var(--primary-dark);
 }
+
+/* Google Map */
+#map {
+  height: 400px;
+  width: 100%;
+}
