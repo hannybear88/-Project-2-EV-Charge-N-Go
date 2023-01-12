@@ -1,5 +1,27 @@
-<!-- Homepage -->
+<div class="container">
+    <div class="row">
+        <!-- form to search for a charging station -->
+        <div class="col-lg-6">
+            <h4>Look for a Charging Station?</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="zipCodeInput" class="form-label">Zip Code:</label>
+                    <input type="number" class="form-control" id="zipCodeInput" aria-describedby="zip code">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </form>
+        </div>
+        <!-- map to display charging stations -->
+        <div class="col-lg-6">
+            <div id="map"></div>
+        </div>
+    </div>
 
 
 
-<script src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAPS_API_KEY}&callback=initMap&v=weekly` defer></script>
+</div>
+
+<script src="/js/homepage.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{apiKey}}&callback=initMap&v=weekly" defer></script>
