@@ -1,0 +1,41 @@
+[
+    {  
+        "name":"Heidi's Charging Station",
+        "charger_type": "Tesla",
+        "level_type": "3",
+        "address": "15191 Dove Creek Rd",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92127",
+        "reservation_counts": 5,
+        "price": 5.00,
+        "minimum_time": 30,
+        "owner_id": 1
+    },
+    {  
+        "name":"Hannah's Charging Station",
+        "charger_type": "Tesla",
+        "level_type": "3",
+        "address": "15191 Dove Creek Rd",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92127",
+        "reservation_counts": 5,
+        "price": 5.00,
+        "minimum_time": 30,
+        "owner_id": 1
+    },
+    {  
+        "name":"Triana's Wall Connector",
+        "charger_type": "Wall",
+        "level_type": "1",
+        "address": "15101 Palomino Mesa Rd",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92127",
+        "reservation_counts": 123,
+        "price": 5.10,
+        "minimum_time": 30,
+        "owner_id": 3
+    }
+]
