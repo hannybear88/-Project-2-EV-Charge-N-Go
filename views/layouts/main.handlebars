@@ -16,9 +16,9 @@
     <div class="container py-2 mb-3">
       <h1 class="display-4">EV Charge N Go</h1>
       <p class="lead">A place to share charging stations.</p>
-      {{#if userName}}
+      {{#if user_name}}
         <hr>
-        <p class="lead">Welcome, {{userName}}!</p>
+        <p class="lead">Welcome, {{user_name}}!</p>
       {{/if}}
     </div>
   </div>
@@ -36,10 +36,9 @@
       <li class="nav-item">
         <a class="nav-link" href="/register">Station Register</a>
       </li>
-      <!-- render nav bar using loggedIn status -->
-      {{#if loggedIn}}
+      {{!-- render nav bar using logged_in status --}}
+      {{#if logged_in}}
         <li class="nav-item">
-          {{!-- <button type="button" class="btn btn-link" id="btn-logout">Logout</button> --}}
           <a class="nav-link" href="/logout">Logout</a>
         </li>
       {{else}}
@@ -53,7 +52,7 @@
   <!-- Main Content -->
   <div class="flex-column">
     <main class="container container-fluid mt-2">
-      <!-- Render the sub layout -->
+      {{!-- Render the sub layout --}}
       {{{ body }}}
     </main>
   </div>

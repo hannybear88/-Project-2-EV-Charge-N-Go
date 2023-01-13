@@ -40,6 +40,14 @@ Station.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    latitude: {
+      type: DataTypes.DECIMAL(7,4),
+      allowNull: false,
+    },
+    longitude: {
+      type: DataTypes.DECIMAL(7,4),
+      allowNull: false,
+    },
     reservation_counts: {
       type: DataTypes.INTEGER,
       allowNull: false,
