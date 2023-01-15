@@ -38,4 +38,8 @@ router.get('/logout'), async (req,res) => {
   res.render('logout')
 };
 
+router.get('/reservation', async (req, res) => {
+  res.render('reservation') 
+});
+
 module.exports = router;
