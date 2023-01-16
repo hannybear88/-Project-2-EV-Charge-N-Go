@@ -45,12 +45,14 @@ function initMap() {
             lat: parseFloat(stations[i].latitude), 
             lng: parseFloat(stations[i].longitude) 
         },
-        icon: "http://maps.google.com/mapfiles/kml/paddle/J.png",
+        //icon: "http://maps.google.com/mapfiles/kml/paddle/J.png",
+        icon: "./assets/icons/ev_station_FILL0_wght400_GRAD0_opsz48.png",
     });
     const address = stations[i].address + ", " + stations[i].city + ", " + stations[i].state + " " + stations[i].zip;
     const infoWindow = new google.maps.InfoWindow({
       content: `
                     <h4>${stations[i].name}</h4>
+                    <button class="btn btn-outline-primary btn-sm mb-2" onclick="window.location.href='/stations/${stations[i].id}'">View Details</button>
                     <h6>Charger Type: ${stations[i].charger_type}</h6>
                     <h6>Level Type: ${stations[i].level_type}</h6>
                     <h6>Address: ${address}</h6>

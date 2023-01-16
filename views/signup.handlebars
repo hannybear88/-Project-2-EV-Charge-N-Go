@@ -1,21 +1,27 @@
-<form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
+<div class="container d-flex flex-column">
+  <div class="title px-5 pt-3 pb-2">
+    <h3>Sign Up</h3>
   </div>
+  <form class="signup-form p-5">
+    <div class="mb-3">
+      <label for="inputUserName" class="form-label">User name</label>
+      <input type="text" class="form-control" id="inputUserName" required>
+    </div>
+    <div class="mb-3">
+      <label for="inputEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail" required>
+    </div>
+    <div class="mb-3">
+      <label for="inputPassword" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword" required>
+      <div id="passwordHelp" class="form-text">At least 8 characters long.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+  <div class="px-1 py-3">
+    <p>Already have an account? 
+      <a href="/login">Login here</a>
+    </p>
 </div>
 
-<script src="/public/js/login.js"></script>
+<script src="/js/signup.js"></script>

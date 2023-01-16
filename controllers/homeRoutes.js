@@ -26,16 +26,62 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get('/login', async (req, res) => {
-  res.render('login') 
+// GET login page
+router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to the /profile route
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+
+  res.render('login', {
+    logged_in: req.session.logged_in,
+    user_name: req.session.user_name,
+  });
 });
 
-router.get('/signup', async (req,res) => {
-  res.render('signup')
+// GET Sign Up page
+router.get("/signup", (req, res) => {
+  // If the user is already logged in, redirect the request to the /profile route
+  if (req.session.logged_in) {
+    res.redirect("/dashboard");
+    return;
+  }
+  res.render("signup", {
+    logged_in: req.session.logged_in, 
+    user_name: req.session.user_name});
 });
 
-router.get('/logout'), async (req,res) => {
-  res.render('logout')
-};
+// GET /logout
+// Log user out and redirect the request to the / (homepage) route
+router.get('/logout', withAuth, (req, res) => {
+  req.session.destroy(() => {
+    res.redirect("/");
+  });
+});
+
+router.get('/profile ', withAuth, async (req, res) => {
+  try {
+    const dbUserData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Station }],
+    });
+
+    const user = dbUserData.get({ plain: true });
+
+    res.render('profile', {
+      ...user,
+      logged_in: req.session.loggin_in,
+      user_name: req.session.user_name,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+router.get('/reservation', async (req, res) => {
+  res.render('reservation') 
+});
 
 module.exports = router;
