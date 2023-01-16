@@ -1,22 +1,42 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Reservation</h2>
+<!-- help message -->
+<div class="sub-heading d-flex flex-column align-items-center my-3">
+    <h4><em>Select date and duration for reservation.</em></h2>
+</div>
 
-    <form class="form reservation-form">
-      <div class="form-group">
-        <label for="date-reserve">Date:</label>
-        <input class="form-input" type="text" id="date-reserve" />
-      </div>
-      <div class="form-group">
-        <label for="length-reserve">Duration:</label>
-        <input class="form-input" type="text" id="length-reserve" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">reserve</button>
-        <a type="button" href="/reserve">Want to Reserve? Reserve Here!</a>
-      </div>
-    </form>
+
+<div class="container d-flex flex-column">
+  <div class="title px-5 pt-3 pb-2">
+    <h2>Reservation</h2>
   </div>
-  <div class="col-md-6">
+
+{{!-- Reservation form body --}}
+    <form class="reservation-form p-5">
+      <div class="dropdown mb-3" >
+        <label for="station-reserve" class="form-drop" >Select Station:</label>
+        <select name="stations", id="pickstation">
+          <option value = "stations">station 1</option>
+          <option value="statios_id">"{{stations}}"</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="date-reserve" class="form-label">Date:</label>
+        <input class="form-control" type="date" id="date-reserve" />
+      </div>
+      <div class="mb-3">
+        <label for="length-reserve" class="form-label">Duration:</label>
+        <input class="form-control" type="time" id="length-reserve" />
+      </div>
+      {{!-- <div class="form-group"> --}}
+        <button class="btn btn-primary" type="submit">Reserve</button>
+        {{!-- <a type="button" href="/reserve">Want to Reserve? Reserve Here!</a> --}}
+      {{!-- </div> --}}
+    </form>
+    <div class="px-1 py-3">
+    <p>Not logged in? 
+      <a href="/login">Login now</a>
+    </p>
+  </div>
+  </div>
+  {{!-- <div class="col-md-6"> --}}
 
     <script src="/public/js/reservation.js"></script>

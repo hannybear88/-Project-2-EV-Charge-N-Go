@@ -16,6 +16,7 @@ router.post('/reservation', async (req, res) => {
 
     req.session.save(() => {
       req.session.station_id = stationData.id;
+      req.session.user_id = reservation.id;
       req.session.logged_in = true;
       
       res.json({ station: stationData, message: 'You have successfully reserved!' });

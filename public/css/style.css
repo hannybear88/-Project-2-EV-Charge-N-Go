@@ -29,12 +29,18 @@
 .signup-form,
 .edit-form,
 .new-form,
+.reservation-form,
 .content {
   border: 1px solid var(--primary-medium);
   border-radius: 0 0 var(--boader-radius) var(--boader-radius);
   background-color: var(--primary-light);
 }
 
+.dropdown { 
+  position: relative;
+  display: inline-block;
+  
+}
 .trimmed-content {
   border-left: 2px solid var(--primary-medium);
   border-right: 2px solid var(--primary-medium);
