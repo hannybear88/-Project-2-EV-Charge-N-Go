@@ -53,6 +53,7 @@ function initMap() {
       content: `
                     <h4>${stations[i].name}</h4>
                     <button class="btn btn-outline-primary btn-sm mb-2" onclick="window.location.href='/stations/${stations[i].id}'">View Details</button>
+                    <button class="btn btn-outline-primary btn-sm mb-2" onclick="window.location.href='/reservation'">Reserve Station</button>
                     <h6>Charger Type: ${stations[i].charger_type}</h6>
                     <h6>Level Type: ${stations[i].level_type}</h6>
                     <h6>Address: ${address}</h6>
