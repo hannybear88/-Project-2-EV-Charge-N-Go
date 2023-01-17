@@ -13,8 +13,8 @@ const loginFormHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
-      // If successful, redirect the browser to the user's profile page
-      document.location.replace('/profile');
+      // If successful, redirect the browser to the home page
+      document.location.replace('/');
     } else {
       const data = await response.json();
       alert(data.message);
