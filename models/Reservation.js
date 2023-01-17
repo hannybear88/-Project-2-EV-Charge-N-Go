@@ -18,8 +18,8 @@ Reservation.init(
       type: DataTypes.DATE,
       allowNull: false
     },
-    reservation_length: {
-      type: DataTypes.INTEGER,
+    reservation_time: {
+      type: DataTypes.TIME,
       allowNull: false
     },
     user_id: {
@@ -30,7 +30,7 @@ Reservation.init(
         unique: false
       }
     },
-    Station_id: {
+    station_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'Station',

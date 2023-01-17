@@ -1,6 +1,6 @@
 [
     {  
-        "name":"Heidi's Charging Station",
+        "name":"Heidi's Charging Station 1",
         "charger_type": "Tesla",
         "level_type": "3",
         "address": "15191 Dove Creek Rd",
@@ -15,11 +15,26 @@
         "owner_id": 1
     },
     {  
+        "name":"Heidi's Charging Station 2",
+        "charger_type": "Wall",
+        "level_type": "1",
+        "address": "3659 Richmond St",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92103",
+        "latitude": 32.7447,
+        "longitude": -117.1510,
+        "reservation_counts": 18,
+        "price": 3.99,
+        "minimum_time": 30,
+        "owner_id": 1
+    },
+    {  
         "name":"Hannah's Charging Station",
         "charger_type": "J-1772",
         "level_type": "2",
         "address": "302 Horizon Dr",
-        "city": ", Encinitas",
+        "city": "Encinitas",
         "state": "CA",
         "zip": "92024",
         "latitude": 33.0423,
