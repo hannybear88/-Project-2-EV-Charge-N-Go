@@ -15,10 +15,7 @@ seedDatabase = async () => {
 
   // seed data for the table "post"
   for (const station of stationData) {
-    await Station.create({
-      ...station,
-      owner_id: users[Math.floor(Math.random() * users.length)].id,
-    });
+    await Station.create(station);
   }
   
   process.exit(0);
