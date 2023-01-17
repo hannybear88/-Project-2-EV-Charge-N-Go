@@ -2,30 +2,29 @@ const router = require('express').Router();
 const { Project } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
-
-router.post('/reservation', async (req, res) => {
-  try {
-    const makereserve = await User.findOne({ where: { datereserve: req.body.datereserve } });
-
-    if (!makereserve) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect date or length, please try again' });
-      return;
-    }
-
-    req.session.save(() => {
-      req.session.station_id = stationData.id;
-      req.session.user_id = reservation.id;
-      req.session.logged_in = true;
+// POST /api/reservations
+// Create a new reservation
+router.post('/', async (req, res) => {
+  try{
+    console.log(req.body);
+    const reserveData = await Reservation.create(req.body);
+    
+    res
+      .status (200)
+      .json(reserveData);
+    // req.session.save(() => {
+    //     req.session.reservation_id = reserveData.id;
+    //     req.session.reservation_date = reserveData.date;
+    //     req.session.reservation_length = reserveData.length;
+    //     req.session.logged_in = true;
+        
       
-      res.json({ station: stationData, message: 'You have successfully reserved!' });
-    });
-
+    //       // .json({ message: 'You have successfully reserved!' });
+    // });
   } catch (err) {
-    res.status(400).json(err);
+    res.status (400).json(err);
   }
 });
-
+  
 
 module.exports = router;
