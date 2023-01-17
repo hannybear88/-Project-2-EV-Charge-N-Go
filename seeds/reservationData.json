@@ -1,0 +1,14 @@
+[
+    {
+        "reservation_date": "2023-07-06",
+        "reservation_time": "6:40:00",
+        "user_id": 1,
+        "station_id": 1
+    },
+    {
+        "reservation_date": "2024-10-06",
+        "reservation_time": "10:40:00",
+        "user_id": 3,
+        "station_id": 2
+    }
+]
