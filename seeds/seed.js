@@ -13,10 +13,11 @@ seedDatabase = async () => {
     returning: true,
   });
 
-  // seed data for the table "post"
-  for (const station of stationData) {
-    await Station.create(station);
-  }
+  // seed data for the table "station"
+  const stations = await Station.bulkCreate(stationData, {
+    individualHooks: true,
+    returning: true,
+  });
   
   process.exit(0);
 };
