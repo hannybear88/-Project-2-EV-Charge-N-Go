@@ -95,7 +95,13 @@ router.get("/myStations", withAuth, async (req, res) => {
 });
 
 // GET /newStation
-// ......
+router.get('/newStation', async (req,res) => {
+  res.render("newStation", {
+    logged_in: req.session.logged_in,
+    user_name: req.session.user_name,
+    user_id: req.session.user_id,
+  });
+});
 
 // myReservations
 router.get("/myReservations", async (req,res) => {
