@@ -54,13 +54,12 @@ function initMap() {
     });
     const address = stations[i].address + ", " + stations[i].city + ", " + stations[i].state + " " + stations[i].zip;
 
-    const reserveClick = `window.location.href="/newReservation/${encodeURIComponent(stations[i].name)}"`
+    const reserveClick = ``
 
     const infoWindow = new google.maps.InfoWindow({
       content: `
                     <h4>${stations[i].name}</h4>
-                    <button class="btn btn-outline-primary btn-sm mb-2" onclick="window.location.href='/stations/${stations[i].id}'">View Details</button>
-                    <button class="btn btn-outline-primary btn-sm mb-2" onclick=${reserveClick}>Reserve Station</button>
+                    <button class="btn btn-outline-primary btn-sm mb-2" onclick="window.location.href='/newReservation/${stations[i].id}'">Reserve Station</button>
                     <h6>Charger Type: ${stations[i].charger_type}</h6>
                     <h6>Level Type: ${stations[i].level_type}</h6>
                     <h6>Address: ${address}</h6>

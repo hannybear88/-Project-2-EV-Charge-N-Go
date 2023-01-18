@@ -99,18 +99,28 @@ router.get("/myStations", withAuth, async (req, res) => {
 
 // myReservations
 router.get("/myReservations", async (req,res) => {
-  const reserveData = await Reservation.findAll({
-    where: {
-      user_id: req.session.user_id
-    }
-  });
-  const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
-  res.render("myReservations", {
-    logged_in: req.session.logged_in,
-    user_name: req.session.user_name,
-    user_id: req.session.user_id,
-    reservations: reservations
-  });
+  try {
+    // Get all reservations for the logged in user
+    const reserveData = await Reservation.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      //include: [ {model: Station}]
+      //include: [ {model: User} ],
+    });
+    // Serialize data so the template can read it
+    const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
+    console.log(reservations);
+    // Pass serialized reservations data into template
+    res.render("myReservations", {
+      logged_in: req.session.logged_in,
+      user_name: req.session.user_name,
+      user_id: req.session.user_id,
+      reservations: reservations
+    });
+  } catch (err) {
+    res.status(500).json(err); 
+  };
 })
 
 // newReservation
@@ -122,13 +132,27 @@ router.get("/newReservation", (req,res) => {
   });
 })
 
-router.get("/newReservation/:name", (req,res) => {
-  res.render("newReservation", {
-    logged_in: req.session.logged_in,
-    user_name: req.session.user_name,
-    user_id: req.session.user_id,
-    station_name: req.params.name
-  });
+// GET /newReservations/:id
+// Render the page for user to reserve a charging station (id)
+router.get("/newReservation/:id", withAuth, async(req,res) => {
+  const station_id = req.params.id;
+  try {
+    const dbStationData = await Station.findOne({
+      where: { id: station_id },
+    });
+    // Serialize data so the template can read it
+    const station = dbStationData.get({ plain: true });
+    res.render("newReservation", {
+      logged_in: req.session.logged_in,
+      user_name: req.session.user_name,
+      user_id: req.session.user_id,
+      station: station
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+
+  
 })
 module.exports = router;
 
