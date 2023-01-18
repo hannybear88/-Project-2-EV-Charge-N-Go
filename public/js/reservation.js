@@ -3,7 +3,7 @@ const reservationFormHandler = async (event) => {
   
     // Collect values from the reservation form
     //const station_id = document.querySelector('#pickstation').value.trim();
-    const station_id = 1;
+    const station_id = document.querySelector('#info-store').datset.stationId.trim();
     const reservation_date = document.querySelector('#date-reserve').value.trim();
     const reservation_time = document.querySelector('#length-reserve').value.trim();
     const user_id = document.getElementById("user_info").dataset.userid.trim();
