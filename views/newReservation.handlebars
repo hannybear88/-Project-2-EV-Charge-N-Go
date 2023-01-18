@@ -8,15 +8,13 @@
   <div class="title px-5 pt-3 pb-2">
     <h2 id="user_info" data-userId={{user_id}}>Reservation</h2>
   </div>
-
 {{!-- Reservation form body --}}
     <form class="reservation-form p-5">
-      <div class="dropdown mb-3" >
-        <label for="station-reserve" class="form-drop" >Select Station:</label>
-        <select name="stations", id="pickstation">
-          <option value = "stations">station 1</option>
-          <option value="statios_id">"{{stations}}"</option>
-        </select>
+      <div class="mb-5">
+      <h4>{{station.name}}</h4>
+      <h5>{{station.address}}, {{station.city}}, {{station.state}} {{station.zip}}</h5>
+      <h6>Charger Type: {{station.charger_type}}</h6>
+      <h6>Charger Level : {{station.level_type}}</h6>
       </div>
       <div class="mb-3">
         <label for="date-reserve" class="form-label">Date:</label>
