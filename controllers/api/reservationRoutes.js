@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Reservation } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
 // POST /api/reservations

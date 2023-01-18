@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Reservation, Station, User } = require("../models");
+const { Station, User, Reservation } = require("../models");
 const withAuth = require("../utils/auth");
 require("dotenv").config();
 
@@ -65,6 +65,14 @@ router.get("/logout", withAuth, (req, res) => {
   });
 });
 
+router.get("/reservation", async (req, res) => {
+  res.render("reservation", {
+    logged_in: req.session.logged_in,
+    user_name: req.session.user_name,
+    user_id: req.session.user_id,
+  });
+});
+
 // GET /myStations
 // Render the page with the user's charging stations
 router.get("/myStations", withAuth, async (req, res) => {
@@ -89,54 +97,95 @@ router.get("/myStations", withAuth, async (req, res) => {
 // GET /newStation
 // ......
 
-router.get('/newReservation', async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect("/login");
-    return;
-  }
-  res.render('newReservation', {
+// myReservations
+router.get("/myReservations", async (req,res) => {
+  const reserveData = await Reservation.findAll({
+    where: {
+      user_id: req.session.user_id
+    }
+  });
+  const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
+  res.render("myReservations", {
     logged_in: req.session.logged_in,
     user_name: req.session.user_name,
     user_id: req.session.user_id,
+    reservations: reservations
   });
-});
+})
 
-router.get('/register', async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect("/login");
-    return;
-  }
-  res.render('register', {
+// newReservation
+router.get("/newReservation", (req,res) => {
+  res.render("newReservation", {
     logged_in: req.session.logged_in,
     user_name: req.session.user_name,
+    user_id: req.session.user_id
   });
-});
+})
 
-router.get('/myReservations', async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect("/login");
-    return;
-  }
-  try {
-    const dbReservationData = await Reservation.findAll({
-      where: { user_id: req.session.user_id },
-    })
-    const dbStationData = await Station.findAll({
-    })
+router.get("/newReservation/:name", (req,res) => {
+  res.render("newReservation", {
+    logged_in: req.session.logged_in,
+    user_name: req.session.user_name,
+    user_id: req.session.user_id,
+    station_name: req.params.name
+  });
+})
+module.exports = router;
 
-    // Serialize data so the template can read it
-    const reservations = dbReservationData.map((reservation)=>reservation.get({ plain: true }));
-    const stations = dbStationData.map((station)=>station.get({ plain: true }));
-    console.log(stations)
-    res.render("myReservations", {
-      stations,
-      reservations,
-      logged_in: req.session.logged_in,
-      user_name: req.session.user_name,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+
+
+
+
+
+
+// router.get('/newReservation', async (req, res) => {
+//   if (!req.session.logged_in) {
+//     res.redirect("/login");
+//     return;
+//   }
+//   res.render('newReservation', {
+//     logged_in: req.session.logged_in,
+//     user_name: req.session.user_name,
+//     user_id: req.session.user_id,
+//   });
+// });
+
+// router.get('/register', async (req, res) => {
+//   if (!req.session.logged_in) {
+//     res.redirect("/login");
+//     return;
+//   }
+//   res.render('register', {
+//     logged_in: req.session.logged_in,
+//     user_name: req.session.user_name,
+//   });
+// });
+
+// router.get('/myReservations', async (req, res) => {
+//   if (!req.session.logged_in) {
+//     res.redirect("/login");
+//     return;
+//   }
+//   try {
+//     const dbReservationData = await Reservation.findAll({
+//       where: { user_id: req.session.user_id },
+//     })
+//     const dbStationData = await Station.findAll({
+//     })
+
+//     // Serialize data so the template can read it
+//     const reservations = dbReservationData.map((reservation)=>reservation.get({ plain: true }));
+//     const stations = dbStationData.map((station)=>station.get({ plain: true }));
+//     console.log(stations)
+//     res.render("myReservations", {
+//       stations,
+//       reservations,
+//       logged_in: req.session.logged_in,
+//       user_name: req.session.user_name,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

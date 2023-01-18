@@ -8,9 +8,18 @@
                     <label for="addressInput" class="form-label">Input city, zip code, partial address or full address:</label>
                     <input type="text" class="form-control" id="addressInput" aria-describedby="address input">
                 </div>
-                <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </div>
+                {{!-- Make the search button redirect to log in if not logged in yet --}}
+                {{#if logged_in}}
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </div>
+                    </li>
+                {{else}}
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-primary redirect">Search</button>
+                    </div>
+                {{/if}}
+                
             </form>
         </div>
         <!-- map to display charging stations -->
@@ -24,4 +33,4 @@
 </div>
 
 <script src="/js/homepage.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key={{apiKey}}&callback=initMap&v=weekly" defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOWUqDFhtCF8ocoab1BSW5h9q_z6R-8Rs&callback=initMap&v=weekly" defer></script>
