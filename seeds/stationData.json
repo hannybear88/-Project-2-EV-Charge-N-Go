@@ -1,6 +1,6 @@
 [
     {  
-        "name":"Heidi's Charging Station 1",
+        "name":"Heidi's Charging Station #1",
         "station_type": "Level-1",
         "plug_in_type": "J1772",
         "address": "15191 Dove Creek Rd",
@@ -12,7 +12,7 @@
         "owner_id": 1
     },
     {  
-        "name":"Heidi's Charging Station 2",
+        "name":"Heidi's Charging Station #2",
         "station_type": "Level-2",
         "plug_in_type": "Tesla",
         "address": "3659 Richmond St",
@@ -24,9 +24,9 @@
         "owner_id": 1
     },
     {  
-        "name":"Hannah's Charging Station",
+        "name":"Hannah's Charging Station #1",
         "station_type": "DC-FastCharging",
-        "plug_in_type": "CCS",
+        "plug_in_type": "CHAdeMO",
         "address": "302 Horizon Dr",
         "city": "Encinitas",
         "state": "CA",
@@ -36,19 +36,43 @@
         "owner_id": 2
     },
     {  
-        "name":"Triana's Charging Station",
+        "name":"Hannah's Charging Station #2",
         "station_type": "DC-FastCharging",
         "plug_in_type": "CHAdeMO",
-        "address": "11326 Matinal Cir",
+        "address": "9255 Ronda Ave",
         "city": "San Diego",
         "state": "CA",
-        "zip": "92127",
-        "latitude": 33.0309,
-        "longitude": -117.0845,
+        "zip": "92123",
+        "latitude": 32.7906,
+        "longitude": -117.1258,
+        "owner_id": 2
+    },
+    {  
+        "name":"Triana's Charging Station #1",
+        "station_type": "DC-FastCharging",
+        "plug_in_type": "CHAdeMO",
+        "address": "7956 Gold Coast Dr",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92126",
+        "latitude": 32.9056, 
+        "longitude": -117.1523,
         "owner_id": 3
     },
     {  
-        "name":"Fernando's Charging Station",
+        "name":"Triana's Charging Station #2",
+        "station_type": "Level-1",
+        "plug_in_type": "J1772",
+        "address": "5107 Onstad St",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92110",
+        "latitude": 32.7728,
+        "longitude": -117.1968,
+        "owner_id": 3
+    },
+    {  
+        "name":"Fernando's Charging Station #1",
         "station_type": "DC-FastCharging",
         "plug_in_type": "Tesla",
         "address": "17904 Aguamiel Rd",
@@ -57,6 +81,18 @@
         "zip": "92127",
         "latitude": 33.0413,
         "longitude": -117.0812,
+        "owner_id": 4
+    },
+    {  
+        "name":"Fernando's Charging Station #2",
+        "station_type": "DC-FastCharging",
+        "plug_in_type": "CCS",
+        "address": "3330 41st St",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92105",
+        "latitude": 32.7409,
+        "longitude": -117.1073,
         "owner_id": 4
     }
 ]
