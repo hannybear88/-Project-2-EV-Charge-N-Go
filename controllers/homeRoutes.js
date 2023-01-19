@@ -112,8 +112,8 @@ router.get("/myReservations", async (req,res) => {
       where: {
         user_id: req.session.user_id
       },
-      //include: [ {model: Station}]
-      //include: [ {model: User} ],
+      // include: [ {model: Station}],
+      // include: [ {model: User} ],
     });
     // Serialize data so the template can read it
     const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
