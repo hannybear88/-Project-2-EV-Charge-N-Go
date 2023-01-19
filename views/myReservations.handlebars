@@ -1,87 +1,37 @@
 <!-- My Reservations -->
 <div class="d-flex flex-column align-items-center mb-3">
-  <a href="/newReservation" class="btn btn-lg btn-primary my-3" id="btn-add-new-post">+ New Reservation</a>
-  
-  {{#if reservations.length}}
-  <h1 class="sub-heading">My Reservations:</h1>
-  <em>
-    <h5 class="sub-heading">Click the reservation Name below to see associated reservations.</h5>
-  </em>
+  {{#if reserved_stations.length}}
+  <h1 class="sub-heading mt-1">My Reservations:</h1>
   {{else}}
   <em>
     <h5 class="sub-heading">You haven't had any Reservations yet!</h5>
   </em>
   <em>
-    <h5 class="sub-heading">Create one by clicking the above button!</h5>
+    <h5 class="sub-heading">Select Charging Station to reserve on the home page!</h5>
   </em>
   {{/if}}
 </div>
 {{!-- render if posts are not empty --}}
-{{#if reservations.length}}
-  {{!-- Loop over each object in the posts array --}}
-  {{#each reservations as |reservation| }}
-  <div class="row post">
-    <div class="col">
-      <!-- post title -->
-      <a class="text-decoration-none" href="/reservation/edit/{{reservation.id}}">
+{{#if reserved_stations.length}}
+  {{!-- Loop over each object in thed Charging Ste posts array --}}
+  {{#each reserved_stations as |station| }}
+    <div class="row mb-3">
+      <div class="col">
+        <!-- charging station name -->
         <div class="title px-3 pt-3 pb-2 d-flex justify-content-between align-items-end flex-wrap ">
-          <h3>{{format_date reservation.reservation_date}}, {{format_time reservation.reservation_time}}</h3>
+          <h3>{{format_date station.reservation.reservation_date}}</h3>
+          <h3>{{format_time station.reservation.reservation_time}}</h3>
         </div>
-      </a>
-      <!-- trimmed post content -->
-      <div class="px-3 py-2">
-        <p>--</p>
+
+        <!-- charging station details -->
+        <div class="reservation-details px-3 py-2">
+          <h4><span class="fw-bold">{{station.name}}</span></h4>
+          <h6>Address: <span class="fw-bold">{{station.address}} {{station.city}}, {{station.state}} {{station.zip}}</span>
+          </h6>
+          <h6>Station Type: <span class="fw-bold">{{station.station_type}}</span></h6>
+          <h6>Plug in Type: <span class="fw-bold">{{station.plug_in_type}}</span></h6>
+        </div>
       </div>
     </div>
-  </div>
   {{/each}}
 {{/if}}
-
-
-
-
-
-
-{{!-- <!-- My Reservations -->
-<div class="d-flex flex-column align-items-center mb-3">
-  <a href="/newReservation" class="btn btn-lg btn-primary my-3" id="btn-add-new-post">+ New Reservation</a>
-  
-  {{#if reservations.length}}
-  <h1 class="sub-heading">My Reservations:</h1>
-  <em>
-    <h5 class="sub-heading">Click the reservation Name below to see associated reservations.</h5>
-  </em>
-  {{else}}
-  <em>
-    <h5 class="sub-heading">You haven't had any Reservations yet!</h5>
-  </em>
-  <em>
-    <h5 class="sub-heading">Create one by clicking the above button!</h5>
-  </em>
-  {{/if}}
-</div>
-{{!-- render if posts are not empty --}}
-{{#if reservations.length}}
-  {{!-- Loop over each object in the posts array --}}
-  {{#each reservations as |reservation| }}
-  <div class="row post">
-    <div class="col">
-      <!-- post title -->
-      <a class="text-decoration-none" href="/reservation/edit/{{reservation.id}}">
-        <div class="title px-3 pt-3 pb-2 d-flex justify-content-between align-items-end flex-wrap ">
-          <h3>{{format_date reservation.reservation_date}}, {{format_time reservation.reservation_time}}</h3>
-        </div>
-      </a>
-      <!-- trimmed post content -->
-      <div class="px-3 py-2">
-        {{#with (lookup ../stations reservation.station_id) as |station|}}
-          <h3>{{station.name}}</h3>
-          <p>{{station.address}}, {{station.city}}, {{station.state}} {{station.zip}}</p>
-          <p>Charger Type: {{station.charger_type}}</p>
-          <p>Level: {{station.level_type}}</p>
-        {{/with}}
-      </div>
-    </div>
-  </div>
-  {{/each}}
-{{/if}} --}}

@@ -1,12 +1,8 @@
 # Project-2
 PROJECT #2
 
-
-
-
 # Project Description
 This app  allows owners of private home chargers to rent out their personal EV chargers to others by location, reservations, and duration of use with an owner fixed rate.
- 
  
 # Table of Contents
 * [User Story](#User-Story)
@@ -42,8 +38,14 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - THEN I must provide an valid email address and password
 - WHEN I am done signing up
 - THEN I am automatically directed to my profile page
-- WHEN 
-- THEN 
+- WHEN I am logged in
+- THEN I can add a charging startion OR make a reservation
+- WHEN I add a charging station
+- THEN I have to fill out the station form
+- WHEN I make a reservation
+- THEN I have to fill out the reservation form
+- WHEN I made the reservation
+- THEN I go to My Reservations
 - WHEN
 - THEN
 - WHEN 
@@ -72,14 +74,6 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - THEN
 - WHEN 
 - THEN 
-- WHEN 
-- THEN 
-- WHEN
-- THEN
-- WHEN 
-- THEN 
-
-
 
 # Motivation for Development
 - We all came to an agreement that 
@@ -98,22 +92,31 @@ This app  allows owners of private home chargers to rent out their personal EV c
 
 ## Technology
 - Trello
-- 
+- HTML
+- CSS3
+- Vanilla Javascript
+- Handlebars
+- Heroku
 
 
 ## Tasks and Roles
-- Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars
-- Heidi Wu: API
-- Triana Deguzman:
-- Fernando Maldonado:
+<!-- - Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars, myReservations.js, reservationRoutes.js, homeRoutes.js, userRoutes.js, homepage.js, reservation.js, main.handlebars, myReservations.handlebars, newReservation.handlebars, reservation.handlebars, helpers.js
+- Heidi Wu: Google API, homeRoutes.js, userRoutes.js, login.js, logout.js, signup.js, css, userData.json, login.handlebars, signup.handlebars, stationData.json, seed.js
+- Triana Deguzman: reservation.handlebars,reservation.js, homeRoutes.js, userRoutes.js, reservationData.json, userData.json
+- Fernando Maldonado: homeRoutes.js, userRoutes.js, newStations.handelbars,myStation.handlebars
 - Everyone: db and models
-- README:
-- Presentation slides:
+- README: Hannah
+- Presentation slides: Triana and Hannah -->
 
 
 
 ## Challenges
-
+<!-- trim error -- making a reservation-->
+- reseration.js 
+<!-- reserve a length of reservation -->
+- duration 
+- rendering registration 
+- correct station id wasn't showing
 
 
 
@@ -127,12 +130,16 @@ screenshots and video below
 
 
 # Directions for Future Development
+- comment section
+- send welcome email to user
 
 
 
 
 # Support
+If you need support or have any questions about the repo, please [open an issue](https://github.com/hannybear88/-Project-2-EV-Charge-N-Go/issues) or contact us via email at evchargengo.p2@gmail.com. 
 
+<!-- You can find more of our work on our GitHub, [hannybear88](https://github.com/hannybear88/), [heidiwu3388](https://github.com/heidiwu3388), [TrianaD](https://github.com/TrianaD), [fmaldmed](https://github.com/fmaldmed). -->
 
 
 
