@@ -10,41 +10,50 @@
 
   <form class="form signup-form">
       <div class="form-group">
-        <label for="owner-register">Owner Name :</label>
-        <input class="form-input" type="text" id="owner-register" />
+        <label for="name">Owner Name :</label>
+        <input class="form-input" type="text" id="name" />
       </div>
       <div class="form-group">
-        <label for="adress-register">Station-Address :</label>
-        <input class="form-input" type="text" id="adress-register" />
+        <label for="adress">Station-Address :</label>
+        <input class="form-input" type="text" id="adress" />
       </div>
       <div class="form-group">
-        <label for="city-register">Station-City :</label>
-        <input class="form-input" type="text" id="city-register" />
+        <label for="city">Station-City :</label>
+        <input class="form-input" type="text" id="city" />
       </div>
       <div class="form-group">
-        <label for="State-register">Station-State :</label>
-        <input class="form-input" type="text" id="State-register" />
+        <label for="state">Station-State :</label>
+        <input class="form-input" type="text" id="state" />
       </div>
       <div class="form-group">
-        <label for="zipcode-register">Station-Zip Code :</label>
-        <input class="form-input" type="text" id="zipcode-register" />
+        <label for="zip">Station-Zip Code :</label>
+        <input class="form-input" type="text" id="zip" />
       </div>
       <div class="form-group">
-        <label for="password-signup">Station type :</label>
-        <input class="form-input" type="text" id="stationtype-register" />
+        <label for="station_type">Station type :</label>
+        <select name="station_type" id="station_type">
+          <option value=“Level-1”>Level 1 (120-Volt)</option>
+          <option value=“Level-2”>Level 2 (240-Volt)</option>
+          <option value=“Level-3”>Level 3 (DC FastCharge)</option>
+        </select>
       </div>
       <div class="form-group">
-        <label for="plugins-register">Plug-in types :</label>
-        <input class="form-input" type="text" id="plugins-register" />
+        <label for="plug_in_type">Plug-in types :</label>
+        <select name="plug_in_type" id="plug_in_type">
+          <option value="J1772"> J1772 Connector</option>
+          <option value="Tesla"> Tesla Connector</option>
+          <option value="CCS"> CCS Connector</option>
+          <option value="CHAdeMO"> CHAdeMO Connector</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="availability-register" class="form-drop">Station Availability :</label>
         <input class="form-drop" type="text" id="availability-register" />
       </div>
-      <div class="form-group">
+      {{!-- <div class="form-group">
         <label for="price-register">Station-Price :</label>
         <input class="form-input" type="currency" id="price-register" />
-      </div>
+      </div> --}}
       <div class="form-group">
         <button class="btn btn-primary" type="submit">Register Your Station</button>
       </div>
