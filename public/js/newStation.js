@@ -52,35 +52,21 @@ createform.appendChild(linebreak);
 var pswdlabel = document.createElement('label');
 
 
+// Function to call time.
+let startTime = document.getElementById('startTime');
+let endTime = document.getElementById('endtime');
 
-var contactlabel = document.createElement('label'); // Create Label for contact number
-contactlabel.innerHTML = "Station Availability : "; // Set Field Labels
-createform.appendChild(contactlabel);
-var inputelement = document.createElement('input'); // Create Input Field for contact number
-inputelement.setAttribute("type", "text");
-inputelement.setAttribute("name", "contno");
-createform.appendChild(inputelement);
-var linebreak = document.createElement('br');
-createform.appendChild(linebreak);
-var emaillabel = document.createElement('label'); // Create Label for E-mail Field
-emaillabel.innerHTML = "Your Email : ";
-createform.appendChild(emaillabel);
-var emailelement = document.createElement('input'); // Create Input Field for E-mail
-emailelement.setAttribute("type", "text");
-emailelement.setAttribute("name", "demail");
-createform.appendChild(emailelement);
-var emailbreak = document.createElement('br');
-createform.appendChild(emailbreak);
-var addresslabel = document.createElement('label'); // Append Textarea
-addresslabel.innerHTML = "Your Address : ";
-createform.appendChild(addresslabel);
-var texareaelement = document.createElement('textarea');
-texareaelement.setAttribute("name", "daddress");
-createform.appendChild(texareaelement);
-var messagebreak = document.createElement('br');
-createform.appendChild(messagebreak);
-var submitelement = document.createElement('input'); // Append Submit Button
-submitelement.setAttribute("type", "submit");
-submitelement.setAttribute("name", "dsubmit");
-submitelement.setAttribute("value", "Submit");
-createform.appendChild(submitelement);
+// Local Storage information
+signUpButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    // create user object from submission
+    var user = {
+      // Form inputs
+      
+    };
+  
+    // set new submission to local storage 
+    localStorage.setItem("newStation", JSON.stringify(newStation));
+    
+  });
