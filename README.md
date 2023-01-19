@@ -130,9 +130,64 @@ screenshots and video below
 
 
 # Directions for Future Development
-- comment section
-- send welcome email to user
 
+## Short Term Goals 
+- Comment section
+- Ability to delete prior reservations
+- Start and finish time reservation 
+- Calendar view for station 
+
+## Long Term Goals
+- Station Reviews
+- Send welcome email to user
+- Ability to chat with owner
+- Filter options such as price, charger types, etc. 
+
+
+# Usage
+
+The following screenshots show examples of the interaction and options presented to the user when application is initiated. 
+
+Homepage:
+
+![showing prompt initial options](./public/assets/images/homepage1.png)
+
+Searching:
+
+![showing prompt initial options](./public/assets/images/homepageSearch.png)
+
+In order to make a reservation, click on the "Reserve Station" as seen in image:
+
+![showing prompt initial options](./public/assets/images/MapSelection.png)
+
+
+Required Login to make new reservation(s) or register a new charging station: 
+
+![showing prompt initial options](./public/assets/images/login1.png)
+
+Detail Reservation: 
+
+![showing prompt initial options](./public/assets/images/reservationselection.png)
+
+Viewing User Reservation(s) "My Reservations": 
+
+![showing prompt initial options](./public/assets/images/myreservations.png)
+
+- If no reservations have been made by the user the following will appear: 
+![showing prompt initial options](./public/assets/images/noreservations.png)
+
+
+Viewing User Charging Stations "My Charging Stations": 
+
+![showing prompt initial options](./public/assets/images/mychargingstations.png)
+
+Registering a new charging station: 
+
+![showing prompt initial options](./public/assets/images/registerstation.png)
+
+Logout: 
+
+![showing prompt initial options](./public/assets/images/Logout.png)
 
 
 
