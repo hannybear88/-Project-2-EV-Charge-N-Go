@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
+const {Station} = require('../../models');
 
 // POST /api/station/
 // Create a new station
