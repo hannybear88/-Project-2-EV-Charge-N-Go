@@ -106,8 +106,8 @@ router.get('/newStation', async (req,res) => {
 
 
 
-// 109-143
-// myReservations
+// GET /myReservations
+// Render the page with the user's reservations
 router.get("/myReservations", withAuth, async (req,res) => {
   try {
     // find the logged in user by id and JOIN with rented Station data
@@ -117,21 +117,12 @@ router.get("/myReservations", withAuth, async (req,res) => {
     });
     // Serialize data so the template can read it
     const user = dbUserData.get({ plain: true });
-    console.log(user);
-    console.log(user.reserved_stations);    
-    // from reservation get station id (brian)
-    
-    // use the station id to find station (brian)
-
-    // serialize like 121 (brian)
-    
     // Pass serialized reservations data into template
     res.render("myReservations", {
       logged_in: req.session.logged_in,
       user_name: req.session.user_name,
       user_id: req.session.user_id,
       reserved_stations: user.reserved_stations
-      // add station data (brain)
     });
   } catch (err) {
     res.status(500).json(err); 
