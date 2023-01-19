@@ -3,14 +3,15 @@ const reservationFormHandler = async (event) => {
   
     // Collect values from the reservation form
     //const station_id = document.querySelector('#pickstation').value.trim();
-    const station_id = document.querySelector('#info-store').datset.stationId.trim();
+    const station_id = document.querySelector('#info-store').dataset.stationid.trim();
     const reservation_date = document.querySelector('#date-reserve').value.trim();
     const reservation_time = document.querySelector('#length-reserve').value.trim();
-    const user_id = document.getElementById("user_info").dataset.userid.trim();
+    const user_id = document.querySelector('#info-store').dataset.userid.trim();
   console.log(station_id);
   console.log(reservation_date);
   console.log(reservation_time);
   console.log(user_id);
+  
 
     if (station_id && reservation_date && reservation_time) {
       // Send a POST request to the API endpoint
