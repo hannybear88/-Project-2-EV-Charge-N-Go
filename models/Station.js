@@ -16,11 +16,11 @@ Station.init(
       allowNull: false,
       unique: true,
     },
-    charger_type: {
+    plug_in_type: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    level_type: {
+    station_type: {
        type:DataTypes.STRING,
        allowNull: false,
     },
@@ -48,18 +48,18 @@ Station.init(
       type: DataTypes.DECIMAL(7,4),
       allowNull: false,
     },
-    reservation_counts: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    price: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
-    minimum_time: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
+    // reservation_counts: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
+    // price: {
+    //   type: DataTypes.FLOAT,
+    //   allowNull: false,
+    // },
+    // minimum_time: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    // },
     owner_id: {
       type: DataTypes.INTEGER,
       references: {
