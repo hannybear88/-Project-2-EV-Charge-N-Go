@@ -68,3 +68,7 @@
   height: 400px;
   width: 100%;
 }
+ 
+#bi, #cash-coin {
+  animation: blink .5s ease-in infinite;
+}
