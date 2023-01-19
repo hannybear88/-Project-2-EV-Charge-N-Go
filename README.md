@@ -102,18 +102,23 @@ This app  allows owners of private home chargers to rent out their personal EV c
 
 
 ## Tasks and Roles
-- Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars
-- Heidi Wu: API
-- Triana Deguzman:
-- Fernando Maldonado:
+- Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars, myReservations.js, reservationRoutes.js, homeRoutes.js, userRoutes.js, homepage.js, reservation.js, main.handlebars, myReservations.handlebars, newReservation.handlebars, reservation.handlebars, helpers.js
+
+- Heidi Wu: Google API, homeRoutes.js, userRoutes.js, login.js, logout.js, signup.js, css, userData.json, login.handlebars, signup.handlebars, 
+
+- Triana Deguzman: reservation.handlebars,reservation.js, homeRoutes.js, userRoutes.js
+- Fernando Maldonado: homeRoutes.js, userRoutes.js, newStations.handelbars,
 - Everyone: db and models
-- README:
-- Presentation slides:
+- README: Hannah
+- Presentation slides: Triana and Hannah
 
 
 
 ## Challenges
-
+- reseration.js <!-- trim error -- making a reservation-->
+- duration <!-- reserve a length of reservation -->
+- rendering registration 
+- correct station id wasn't showing
 
 
 
