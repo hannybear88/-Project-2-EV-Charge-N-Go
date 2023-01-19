@@ -89,6 +89,7 @@ router.get("/myStations", withAuth, async (req, res) => {
       logged_in: req.session.logged_in,
       user_name: req.session.user_name,
     });
+    console.log(stations);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -116,7 +117,6 @@ router.get("/myReservations", async (req,res) => {
     });
     // Serialize data so the template can read it
     const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
-    console.log(reservations);
     // Pass serialized reservations data into template
     res.render("myReservations", {
       logged_in: req.session.logged_in,

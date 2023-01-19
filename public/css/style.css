@@ -14,6 +14,7 @@
   color: var(--white);
 }
 
+.station-title,
 .title {
   background-color: var(--primary-medium);
   color: var(--white);
@@ -41,9 +42,9 @@
   display: inline-block;
   
 }
-.trimmed-content {
-  border-left: 2px solid var(--primary-medium);
-  border-right: 2px solid var(--primary-medium);
+.station-details {
+  border: 2px solid var(--primary-medium);
+  border-radius: 0 0 var(--boader-radius) var(--boader-radius);
 }
 
 .comment-by {

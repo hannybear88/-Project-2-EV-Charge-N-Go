@@ -60,10 +60,9 @@ function initMap() {
       content: `
                     <h4>${stations[i].name}</h4>
                     <button class="btn btn-outline-primary btn-sm mb-2" onclick="window.location.href='/newReservation/${stations[i].id}'">Reserve Station</button>
-                    <h6>Charger Type: ${stations[i].charger_type}</h6>
-                    <h6>Level Type: ${stations[i].level_type}</h6>
+                    <h6>Station Type: ${stations[i].station_type}</h6>
+                    <h6>Plug-in Type: ${stations[i].plug_in_type}</h6>
                     <h6>Address: ${address}</h6>
-                    <h6>Accumulated reservations: ${stations[i].reservation_counts}</h6>
                     `,
     });
     marker.addListener("click", function () {
