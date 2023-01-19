@@ -42,10 +42,7 @@
   display: inline-block;
   
 }
-.station-details {
-  border: 2px solid var(--primary-medium);
-  border-radius: 0 0 var(--boader-radius) var(--boader-radius);
-}
+
 
 .comment-by {
   background-color: var(--primary-light);
@@ -68,4 +65,17 @@
 #map {
   height: 400px;
   width: 100%;
+}
+
+
+
+.home-search-card,
+.home-share-card {
+  border: 1px solid var(--primary-medium);
+  border-radius: var(--boader-radius);
+}
+.reservation-details,
+.station-details {
+  border: 2px solid var(--primary-medium);
+  border-radius: 0 0 var(--boader-radius) var(--boader-radius);
 }

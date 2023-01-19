@@ -103,42 +103,33 @@ router.get('/newStation', async (req,res) => {
   });
 });
 
-// myReservations
-router.get("/myReservations", async (req,res) => {
+
+
+// GET /myReservations
+// Render the page with the user's reservations
+router.get("/myReservations", withAuth, async (req,res) => {
   try {
-    // Get all reservations for the logged in user
-    const reserveData = await Reservation.findAll({
-      where: {
-        user_id: req.session.user_id
-      },
-      //include: [ {model: Station}],
-      // include: [ {model: User} ],
+    // find the logged in user by id and JOIN with rented Station data
+    const dbUserData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+      include: [{ model: Station, through: Reservation, as: "reserved_stations" }],
     });
-
-    
-    
     // Serialize data so the template can read it
-    const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
-    console.log(reservations);
-    
-    // from reservation get station id
-
-    // use the station id to find station
-
-    // serialize like 121
-    
+    const user = dbUserData.get({ plain: true });
     // Pass serialized reservations data into template
     res.render("myReservations", {
       logged_in: req.session.logged_in,
       user_name: req.session.user_name,
       user_id: req.session.user_id,
-      reservations: reservations
-      // add station data
+      reserved_stations: user.reserved_stations
     });
   } catch (err) {
     res.status(500).json(err); 
   };
 })
+
+
+
 
 // newReservation
 router.get("/newReservation", (req,res) => {
@@ -171,73 +162,4 @@ router.get("/newReservation/:id", withAuth, async(req,res) => {
 
   
 })
-module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// router.get('/newReservation', async (req, res) => {
-//   if (!req.session.logged_in) {
-//     res.redirect("/login");
-//     return;
-//   }
-//   res.render('newReservation', {
-//     logged_in: req.session.logged_in,
-//     user_name: req.session.user_name,
-//     user_id: req.session.user_id,
-//   });
-// });
-
-// router.get('/register', async (req, res) => {
-//   if (!req.session.logged_in) {
-//     res.redirect("/login");
-//     return;
-//   }
-//   res.render('register', {
-//     logged_in: req.session.logged_in,
-//     user_name: req.session.user_name,
-//   });
-// });
-
-// router.get('/myReservations', async (req, res) => {
-//   if (!req.session.logged_in) {
-//     res.redirect("/login");
-//     return;
-//   }
-//   try {
-//     const dbReservationData = await Reservation.findAll({
-//       where: { user_id: req.session.user_id },
-//     })
-//     const dbStationData = await Station.findAll({
-//     })
-
-//     // Serialize data so the template can read it
-//     const reservations = dbReservationData.map((reservation)=>reservation.get({ plain: true }));
-//     const stations = dbStationData.map((station)=>station.get({ plain: true }));
-//     console.log(stations)
-//     res.render("myReservations", {
-//       stations,
-//       reservations,
-//       logged_in: req.session.logged_in,
-//       user_name: req.session.user_name,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 module.exports = router;
