@@ -117,7 +117,6 @@ router.get("/myReservations", async (req,res) => {
     });
     // Serialize data so the template can read it
     const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
-    console.log(reservations);
     // Pass serialized reservations data into template
     res.render("myReservations", {
       logged_in: req.session.logged_in,
