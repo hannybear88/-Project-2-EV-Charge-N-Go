@@ -3,12 +3,24 @@
         "reservation_date": "2023-07-06",
         "reservation_time": "6:40:00",
         "user_id": 1,
-        "station_id": 1
+        "station_id": 3
+    },
+    {
+        "reservation_date": "2023-06-01",
+        "reservation_time": "11:30:00",
+        "user_id": 1,
+        "station_id": 4
+    },
+    {
+        "reservation_date": "2023-05-12",
+        "reservation_time": "13:00:00",
+        "user_id": 1,
+        "station_id": 5
     },
     {
         "reservation_date": "2024-10-06",
         "reservation_time": "10:40:00",
-        "user_id": 3,
-        "station_id": 2
+        "user_id": 2,
+        "station_id": 5
     }
 ]
