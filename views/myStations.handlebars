@@ -4,7 +4,7 @@
   {{#if stations.length}}
   <h1 class="sub-heading">My Charging Stations:</h1>
   <em>
-    <h5 class="sub-heading">Click the Station Name below to see associated reservations.</h5>
+    <h5 class="sub-heading">Click the Station Name below to see the associated reservations.</h5>
   </em>
   {{else}}
   <em>
@@ -15,21 +15,23 @@
   </em>
   {{/if}}
 </div>
-{{!-- render if posts are not empty --}}
+{{!-- render if stations are not empty --}}
 {{#if stations.length}}
-  {{!-- Loop over each object in the posts array --}}
+  {{!-- Loop over each object in the stations array --}}
   {{#each stations as |station| }}
-  <div class="row post">
+  <div class="row mb-3">
     <div class="col">
-      <!-- post title -->
-      <a class="text-decoration-none" href="/station/edit/{{station.id}}">
-        <div class="title px-3 pt-3 pb-2 d-flex justify-content-between align-items-end flex-wrap ">
+      <!-- charging station name -->
+      <a class="text-decoration-none" href="/api/stations/{{station.id}}">
+        <div class="station-title px-3 pt-3 pb-2 d-flex justify-content-between align-items-end flex-wrap ">
           <h3>{{station.name}}</h3>
         </div>
       </a>
-      <!-- trimmed post content -->
-      <div class="px-3 py-2">
-        <p>{{station.address}}, {{station.city}}, {{station.state}} {{station.zip}}</p>
+      <!-- Charging station details -->
+      <div class="station-details px-3 py-2">
+        <p>Address: {{station.address}}, {{station.city}}, {{station.state}} {{station.zip}}</p>
+        <p>Charger Type: {{station.charger_type}}</p>
+        <p>Charger Level: {{station.level_type}}</p>
       </div>
     </div>
   </div>
