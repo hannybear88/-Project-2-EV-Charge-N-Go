@@ -1,17 +1,13 @@
 <!-- My Charging Stations -->
-<div class="d-flex flex-column align-items-center mb-3">
-  <a href="/newStation" class="btn btn-lg btn-primary my-3" id="btn-add-new-post">+ New Charging Station</a>
+<div class="d-flex flex-column align-items-center my-3">
   {{#if stations.length}}
   <h1 class="sub-heading">My Charging Stations:</h1>
-  <em>
-    <h5 class="sub-heading">Click the Station Name below to see the associated reservations.</h5>
-  </em>
   {{else}}
   <em>
     <h5 class="sub-heading">You haven't had any Charging Station registered yet!</h5>
   </em>
   <em>
-    <h5 class="sub-heading">Create one by clicking the above button!</h5>
+    <h5 class="sub-heading">Create one on the Home page!</h5>
   </em>
   {{/if}}
 </div>
@@ -22,16 +18,14 @@
   <div class="row mb-3">
     <div class="col">
       <!-- charging station name -->
-      <a class="text-decoration-none" href="/api/stations/{{station.id}}">
-        <div class="station-title px-3 pt-3 pb-2 d-flex justify-content-between align-items-end flex-wrap ">
-          <h3>{{station.name}}</h3>
-        </div>
-      </a>
+      <div class="station-title px-3 pt-3 pb-2 d-flex justify-content-between align-items-end flex-wrap ">
+        <h3>{{station.name}}</h3>
+      </div>
       <!-- Charging station details -->
       <div class="station-details px-3 py-2">
-        <p>Address: {{station.address}}, {{station.city}}, {{station.state}} {{station.zip}}</p>
-        <p>Charger Type: {{station.charger_type}}</p>
-        <p>Charger Level: {{station.level_type}}</p>
+        <p>Address: <span class="fw-bold">{{station.address}}, {{station.city}}, {{station.state}} {{station.zip}}</span></p>
+        <p>Station Type: <span class="fw-bold">{{station.station_type}}</span></p>
+        <p>Plug-in Type: <span class="fw-bold">{{station.plug_in_type}}</span></p>
       </div>
     </div>
   </div>

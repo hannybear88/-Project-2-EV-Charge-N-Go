@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Station } = require('../../models');
 const withAuth = require('../../utils/auth');
-const {Station} = require('../../models');
 
 // POST /api/station/
 // Create a new station
@@ -47,6 +46,7 @@ router.get("/:id", withAuth, async (req,res) => {
   try {
     // Find the station by id and include its reservations
     const dbStationData = await Station.findByPk(station_id);
+
     console.log("hello");
     // Serialize data so the template can read it
     const station = dbStationData.get({ plain: true });

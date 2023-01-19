@@ -1,29 +1,29 @@
 <div class="container">
     <div class="row">
-        <!-- form to search for a charging station -->
-        <div class="col-lg-6">
-            <h4>Look for a Charging Station?</h4>
-            <form id="address-form">
-                <div class="mb-3">
-                    <label for="addressInput" class="form-label">Input city, zip code, partial address or full address:</label>
-                    <input type="text" class="form-control" id="addressInput" aria-describedby="address input">
-                </div>
-                {{!-- Make the search button redirect to log in if not logged in yet --}}
-                {{#if logged_in}}
+        <div class="col-lg-6 d-flex flex-column">
+            <!-- Look for a charging station -->
+            <div class="home-search-card mb-3 px-3 pt-2">
+                <h4>Look for a Charging Station?</h4>
+                <form id="address-form">
+                    <div class="mb-3">
+                        <label for="addressInput" class="form-label">Input city, zip code, partial address or full address:</label>
+                        <input type="text" class="form-control" id="addressInput" aria-describedby="address input">
+                    </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Search</button>
                     </div>
                     </li>
-                {{else}}
-                    <div class="mb-3">
-                        <button type="button" class="btn btn-primary redirect">Search</button>
-                    </div>
-                {{/if}}
-                
-            </form>
+                </form>
+            </div>
+            <!-- Share my Charging Stations -->
+            <div class="home-share-card mb-3 px-3 pt-2">
+                <h4>Share your Charging Station?</h4>
+                <a href="/newStation" class="btn btn-primary my-3">+ Charging Station</a>
+            </div>
         </div>
         <!-- map to display charging stations -->
         <div class="col-lg-6">
+            <h6 class="p-1">Click the charging station icon for details and making reservation.</h6>
             <div id="map" data-stations="{{stations}}"></div>
         </div>
     </div>
