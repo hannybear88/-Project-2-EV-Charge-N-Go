@@ -69,3 +69,9 @@
   height: 400px;
   width: 100%;
 }
+
+.home-search-card,
+.home-share-card {
+  border: 1px solid var(--primary-medium);
+  border-radius: var(--boader-radius);
+}
