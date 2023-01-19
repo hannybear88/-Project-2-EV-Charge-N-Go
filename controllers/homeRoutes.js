@@ -89,7 +89,6 @@ router.get("/myStations", withAuth, async (req, res) => {
       logged_in: req.session.logged_in,
       user_name: req.session.user_name,
     });
-    console.log(stations);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -104,46 +103,6 @@ router.get('/newStation', async (req,res) => {
   });
 });
 
-
-
-// // 109-143
-// // myReservations
-// router.get("/myReservations", async (req,res) => {
-//   try {
-//     // Get all reservations for the logged in user
-//     const reserveData = await Reservation.findAll({
-//       where: {
-//         user_id: req.session.user_id
-//       },
-//       //include: [ {model: Station}],
-//       // include: [ {model: User} ],
-//     });
-
-    
-//     // Serialize data so the template can read it
-//     const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
-//     console.log(reservations);
-    
-//     // from reservation get station id
-
-//     // use the station id to find station
-
-//     // serialize like 121
-    
-//     // Pass serialized reservations data into template
-//     res.render("myReservations", {
-//       logged_in: req.session.logged_in,
-//       user_name: req.session.user_name,
-//       user_id: req.session.user_id,
-//       reservations: reservations
-//       // add station data
-//     });
-//   } catch (err) {
-//     res.status(500).json(err); 
-//   };
-// })
-
-// 145-193
 // myReservations
 router.get("/myReservations", async (req,res) => {
   try {
@@ -152,46 +111,34 @@ router.get("/myReservations", async (req,res) => {
       where: {
         user_id: req.session.user_id
       },
-      // include: [ {model: Station}],
+      //include: [ {model: Station}],
       // include: [ {model: User} ],
     });
-// ----------------------NEW-------------------------------//
-// ----------------------START-------------------------------//
-    // from reservation get station id
-    router.get("/myReservations", async (req, res) => {
-      const station_id = req.params.id;
-      try{
-        const reservationData = await Reservation.findOne ({
-          where: { id2: station_id}
-          });
-      // use the station id to find station
-      // serialize like 121
-      const stations = reservationData.get({ plain: true });
-      res.render("myReservations", {
-        logged_in: req.session.logged_in,
-        stations:stations
-        // add station data
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    };
-  });
-// ----------------------END-------------------------------//
+
+    
+    
     // Serialize data so the template can read it
     const reservations = reserveData.map((reservation)=>reservation.get({ plain: true }));
+    console.log(reservations);
+    
+    // from reservation get station id
+
+    // use the station id to find station
+
+    // serialize like 121
+    
     // Pass serialized reservations data into template
     res.render("myReservations", {
       logged_in: req.session.logged_in,
       user_name: req.session.user_name,
       user_id: req.session.user_id,
-      reservations: reservations,
+      reservations: reservations
       // add station data
     });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err); 
   };
 })
-
 
 // newReservation
 router.get("/newReservation", (req,res) => {
