@@ -100,6 +100,7 @@ router.get('/newStation', withAuth, async (req,res) => {
     logged_in: req.session.logged_in,
     user_name: req.session.user_name,
     user_id: req.session.user_id,
+    apiKey: process.env.GOOGLE_MAPS_API_KEY,
   });
 });
 
