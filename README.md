@@ -6,16 +6,15 @@ This app  allows owners of private home chargers to rent out their personal EV c
  
 # Table of Contents
 * [User Story](#User-Story)
-* [How to Use this Project and Acceptance Criteria](#How-to-Use-this-Project-and-Acceptance-Criteria) 
+* [Acceptance Criteria](#Acceptance-Criteria) 
 * [Motivation for Development](#Motivation-for-Development) 
-* [Features](#Features)
 * [Process](#Process) 
 * [Technology](#Technology) 
 * [Tasks and Roles](#Tasks-and-Roles) 
 * [Challenges](#Challenges) 
 * [Successes](#Successes) 
-* [Demo](#Demo) 
 * [Directions for Future Development](#Directions-for-Future-Development) 
+* [Usage](#Usage) 
 * [Support](#Support) 
 * [Credits](#Credits) 
 * [Contributors](#Contributors) 
@@ -30,7 +29,7 @@ This app  allows owners of private home chargers to rent out their personal EV c
 
 
 
-# How to Use this Project and Acceptance Criteria
+# Acceptance Criteria
 - GIVEN a EV Charge N Go Site
 - WHEN I visit the site for the first time
 - THEN I am presented homepage, which includes a map and a zip code form to enter your zip code
@@ -62,11 +61,6 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - We all came to an agreement that EV Charging isnt easily accessible and a gap for EV owners and station owners exists. Therefore allowing owners of stations to rent out home stations and also supporting EV drivers to a wider range of charging access better supports the future mission.  
 
 
-# Features
-
-
-
-
 # Process
 - Topic / Project defined
 - Defined a high level breakdown of the project
@@ -80,11 +74,22 @@ This app  allows owners of private home chargers to rent out their personal EV c
 
 ## Technology
 - Trello was used to help define tasks, schedule, and ownership throughout the different phases of the project.
-- HTML
+- HTML5
+- Bootstrap
 - CSS3
 - Vanilla Javascript
-- Handlebars
 - Heroku
+- Bcrypt
+- Chalk
+- Handlebars.js
+- connect-session- sequelize
+- Dotenv
+- Express
+- Express-handlebars
+- Express-session
+- Sequelize
+
+
 
 
 ## Tasks and Roles
@@ -116,8 +121,6 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - Defining the flow and linkages between the various stages 
 - Connecting the station registration 
 
-
-## Demo
 
 Screenshots of application usage along with links to deployed site below. 
 
