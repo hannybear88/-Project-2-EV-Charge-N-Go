@@ -79,3 +79,24 @@
   border: 2px solid var(--primary-medium);
   border-radius: 0 0 var(--boader-radius) var(--boader-radius);
 }
+
+.nav-link {
+  color: var(--primary-dark);
+  font-weight: bold;
+}
+
+.nav-link:hover{
+  color: var(--primary-medium);
+  
+}
+
+.btn {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  
+}
+
+.btn:hover{ 
+  background-color: var(--primary-medium);
+  border-color: var(--primary-medium);
+}
