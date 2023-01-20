@@ -1,72 +1,35 @@
-var x = document.getElementById("form_sample");
-var createform = document.createElement('form');
+// // // Function to call time.
+// // let startTime = document.getElementById('startTime');
+// // let endTime = document.getElementById('endtime');
+const station_name = document.getElementById('Station_name').value;
+const station_address = document.getElementById('station_address').value;
+const station_city = document.getElementById('Station_city').value;
+const station_state = document.getElementById('Station_state').value;
+const station_zip = document.getElementById('Station_zip').value;
+const station_type = document.getElementById('Station_type');
+const plug_in_type = document.getElementById('plug_in_type');
 
- // Create New Element Form
-createform.setAttribute("action", "");
-
- // Setting Action Attribute on Form
-createform.setAttribute("method", "post");
-
-// Setting Method Attribute on Form
-x.appendChild(createform);
-var heading = document.createElement('h2');
-
-// Heading of Form
-heading.innerHTML = "Station Registration Form ";
-createform.appendChild(heading);
-var line = document.createElement('hr');
-
-// Giving Horizontal Row After Heading
-createform.appendChild(line);
-var linebreak = document.createElement('br');
-createform.appendChild(linebreak);
-var namelabel = document.createElement('label');
-
-// Create Label for Charger Type Field
-namelabel.innerHTML = "Your Charger Type : ";
-
-// Set Field Labels
-createform.appendChild(namelabel);
-var inputelement = document.createElement('input');
-
-// Create Input Field for Name
-inputelement.setAttribute("type", "text");
-inputelement.setAttribute("name", "dname");
-createform.appendChild(inputelement);
-var linebreak = document.createElement('br');
-createform.appendChild(linebreak);
-var usernamelabel = document.createElement('label');
-
-// Create Label for Address Field
-usernamelabel.innerHTML = "Station Address : ";
-// Set Field Labels
-createform.appendChild(usernamelabel);
-var inputelement = document.createElement('input');
-
-// Create Input Field for Name
-inputelement.setAttribute("type", "text");
-inputelement.setAttribute("name", "usrname");
-createform.appendChild(inputelement);
-var linebreak = document.createElement('br');
-createform.appendChild(linebreak);
-var pswdlabel = document.createElement('label');
+ console.log(station_address);
+function initMap() { 
+    // initialize geocoder
+    geocoder = new google.maps.Geocoder();
+};
 
 
-// Function to call time.
-let startTime = document.getElementById('startTime');
-let endTime = document.getElementById('endtime');
-
-// Local Storage information
-signUpButton.addEventListener("click", function(event) {
+// Function for Submit
+function registerNewStation(event){
     event.preventDefault();
-    
-    // create user object from submission
-    var user = {
-      // Form inputs
-      
-    };
-  
-    // set new submission to local storage 
-    localStorage.setItem("newStation", JSON.stringify(newStation));
-    
-  });
+   
+    const address = station_address + ', ' + station_city + ', ' + station_state + ' ' + station_zip;
+    console.log(address );
+//   geocoder.geocode({ address: address }, function (results, status) {
+//     if (status == "OK") {
+//       map.setCenter(results[0].geometry.location);
+//     } else {
+//       alert("Geocode was not successful for the following reason: " + status);
+//       return;
+//     }
+//   });
+}
+// Eventlistener submit
+document.querySelector(".newStation-form").addEventListener("submit", registerNewStation);
