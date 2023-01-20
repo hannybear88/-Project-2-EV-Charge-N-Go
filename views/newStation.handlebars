@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+{{!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" /> --}}
 
 <div class="sub-heading d-flex flex-column align-items-center my-3">
   <h4><em><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green" class="bi bi-cash-coin" viewBox="0 0 16 16">
@@ -43,26 +43,26 @@
 <div class="container d-flex flex-column">
   <div class="title d-flex flex-column align-items-center px-5 pt-3 pb-2">
     <h2 id="user_info" data-userId={{user_id}}>Register Your Station Here!</h2>
-  </div><form class="form signup-form d-flex flex-column align-items-center">
+  </div><form class="newStation-form d-flex flex-column align-items-center">
       <div class="form-group d-flex flex-column align-items-center">
-        <label for="name">Owner Name :</label>
-        <input class="form-input" type="text" id="name" />
+        <label for="Station_name">Station Name :</label>
+        <input class="form-input" type="text" id="Station_name" />
       </div>
       <div class="form-group d-flex flex-column align-items-center">
-        <label for="adress">Station-Address :</label>
-        <input class="form-input" type="text" id="adress" />
+        <label for="station_address">Station Address :</label>
+        <input class="form-input" type="text" id="station_address" />
       </div>
       <div class="form-group d-flex flex-column align-items-center">
-        <label for="city">Station-City :</label>
-        <input class="form-input" type="text" id="city" />
+        <label for="Station_city">Station City :</label>
+        <input class="form-input" type="text" id="Station_city" />
       </div>
       <div class="form-group d-flex flex-column align-items-center">
-        <label for="state">Station-State :</label>
-        <input class="form-input" type="text" id="state" />
+        <label for="Station_state">Station State :</label>
+        <input class="form-input" type="text" id="Station_state" />
       </div>
       <div class="form-group d-flex flex-column align-items-center">
-        <label for="zip">Station-Zip Code :</label>
-        <input class="form-input" type="text" id="zip" />
+        <label for="Station_zip">Station Zip Code :</label>
+        <input class="form-input" type="text" id="Station_zip" />
       </div>
       <div class="form-group d-flex flex-column align-items-center">
         <label for="station_type">Station type :</label>
@@ -81,18 +81,19 @@
           <option value="CHAdeMO"> CHAdeMO Connector</option>
         </select>
       </div>
-      <div class="form-group d-flex flex-column align-items-center">
+      {{!-- <div class="form-group d-flex flex-column align-items-center">
         <label for="availability-register" class="form-drop">Station Availability :</label>
         <input class="form-drop" type="text" id="availability-register" />
-      </div>
+      </div> --}}
       {{!-- <div class="form-group">
         <label for="price-register">Station-Price :</label>
         <input class="form-input" type="currency" id="price-register" />
       </div> --}}
-      <div class="form-group d-flex flex-column align-items-center">
+      <div class="form-group d-flex flex-column align-items-center my-3">
         <button class="btn btn-primary" type="submit">Register Your Station</button>
       </div>
     </form>
   </div>
 </div>
-<script src="/public/js/newStation"></script>
+<script src="/js/newStation.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOWUqDFhtCF8ocoab1BSW5h9q_z6R-8Rs&callback=initMap&v=weekly" defer></script>
