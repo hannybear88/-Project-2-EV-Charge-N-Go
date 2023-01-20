@@ -1,5 +1,6 @@
 [
     {  
+        "id": 1,
         "name":"Heidi's Charging Station #1",
         "station_type": "Level-1",
         "plug_in_type": "J1772",
@@ -7,11 +8,12 @@
         "city": "San Diego",
         "state": "CA",
         "zip": "92127",
-        "latitude": 32.9876,
-        "longitude": -117.0987,
+        "latitude": 33.0052,
+        "longitude": -117.1105,
         "owner_id": 1
     },
     {  
+        "id": 2,
         "name":"Heidi's Charging Station #2",
         "station_type": "Level-2",
         "plug_in_type": "Tesla",
@@ -24,6 +26,7 @@
         "owner_id": 1
     },
     {  
+        "id": 3,
         "name":"Hannah's Charging Station #1",
         "station_type": "DC-FastCharging",
         "plug_in_type": "CHAdeMO",
@@ -36,6 +39,7 @@
         "owner_id": 2
     },
     {  
+        "id": 4,
         "name":"Hannah's Charging Station #2",
         "station_type": "DC-FastCharging",
         "plug_in_type": "CHAdeMO",
@@ -48,6 +52,7 @@
         "owner_id": 2
     },
     {  
+        "id": 5,
         "name":"Triana's Charging Station #1",
         "station_type": "DC-FastCharging",
         "plug_in_type": "CHAdeMO",
@@ -60,6 +65,7 @@
         "owner_id": 3
     },
     {  
+        "id": 6,
         "name":"Triana's Charging Station #2",
         "station_type": "Level-1",
         "plug_in_type": "J1772",
@@ -72,6 +78,7 @@
         "owner_id": 3
     },
     {  
+        "id": 7,
         "name":"Fernando's Charging Station #1",
         "station_type": "DC-FastCharging",
         "plug_in_type": "Tesla",
@@ -84,6 +91,7 @@
         "owner_id": 4
     },
     {  
+        "id": 8,
         "name":"Fernando's Charging Station #2",
         "station_type": "DC-FastCharging",
         "plug_in_type": "CCS",
@@ -93,6 +101,84 @@
         "zip": "92105",
         "latitude": 32.7409,
         "longitude": -117.1073,
+        "owner_id": 4
+    },
+    {  
+        "id": 9,
+        "name":"Fernando's Charging Station #3",
+        "station_type": "Level-2",
+        "plug_in_type": "J1772",
+        "address": "4450 Rolando Blvd",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92115",
+        "latitude": 32.7582,
+        "longitude": -117.0570,
+        "owner_id": 4
+    },
+    {  
+        "id": 10,
+        "name":"Fernando's Charging Station #4",
+        "station_type": "DC-FastCharging",
+        "plug_in_type": "Tesla",
+        "address": "3331 A St",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92102",
+        "latitude": 32.7189, 
+        "longitude": -117.1224,
+        "owner_id": 4
+    },
+    {  
+        "id": 11,
+        "name":"Fernando's Charging Station #5",
+        "station_type": "DC-FastCharging",
+        "plug_in_type": "Tesla",
+        "address": "8681 Lepus Rd",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92126",
+        "latitude": 32.9291,
+        "longitude": -117.1368,
+        "owner_id": 4
+    },
+    {  
+        "id": 12,
+        "name":"Fernando's Charging Station #6",
+        "station_type": "Level-1",
+        "plug_in_type": "J1772",
+        "address": "11391 Lott Point",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92126",
+        "latitude": 32.9289,
+        "longitude": -117.1497,
+        "owner_id": 4
+    },
+    {  
+        "id": 13,
+        "name":"Fernando's Charging Station #7",
+        "station_type": "Level-1",
+        "plug_in_type": "J1772",
+        "address": "10360 Glenellen Ln",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92126",
+        "latitude": 32.9061,
+        "longitude": -117.1282,
+        "owner_id": 4
+    },
+    {  
+        "id": 14,
+        "name":"Fernando's Charging Station #8",
+        "station_type": "Level-2",
+        "plug_in_type": "Tesla",
+        "address": "10918 Barbados Way",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92126",
+        "latitude": 32.9166,
+        "longitude": -117.1606,
         "owner_id": 4
     }
 ]

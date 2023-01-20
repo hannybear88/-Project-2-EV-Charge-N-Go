@@ -13,9 +13,26 @@
     },
     {
         "reservation_date": "2023-05-12",
-        "reservation_time": "13:00:00",
+        "reservation_time": "19:10:00",
         "user_id": 1,
         "station_id": 5
+    },
+    {
+        "reservation_date": "2023-05-12",
+        "reservation_time": "17:00:00",
+        "user_id": 2,
+        "station_id": 1
+    },
+    {
+        "reservation_date": "2023-06-01",
+        "reservation_time": "15:00:00",
+        "user_id": 3,
+        "station_id": 8
+    },{
+        "reservation_date": "2023-07-19",
+        "reservation_time": "12:30:00",
+        "user_id": 3,
+        "station_id": 7
     },
     {
         "reservation_date": "2024-10-06",
