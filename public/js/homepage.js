@@ -83,14 +83,14 @@ function initMap() {
     });
     const address = stations[i].address + ", " + stations[i].city + ", " + stations[i].state + " " + stations[i].zip;
 
-        const infoWindow = new google.maps.InfoWindow({
+    const infoWindow = new google.maps.InfoWindow({
       content: `
-                    <h4>${stations[i].name}</h4>
-                    <button class="btn btn-outline-light btn-sm mb-2" onclick="window.location.href='/newReservation/${stations[i].id}'">Reserve Station</button>
-                    <h6>Station Type: ${stations[i].station_type}</h6>
-                    <h6>Plug-in Type: ${stations[i].plug_in_type}</h6>
-                    <h6>Address: ${address}</h6>
-                    `,
+        <h4>${stations[i].name}</h4>
+        <button class="btn btn-outline-light btn-sm mb-2" onclick="window.location.href='/newReservation/${stations[i].id}'">Reserve Station</button>
+        <h6>Station Type: ${stations[i].station_type}</h6>
+        <h6>Plug-in Type: ${stations[i].plug_in_type}</h6>
+        <h6>Address: ${address}</h6>
+        `,
     });
     marker.addListener("click", function () {
       infoWindow.open(map, marker);

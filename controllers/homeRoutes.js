@@ -65,18 +65,9 @@ router.get("/logout", withAuth, (req, res) => {
   });
 });
 
-router.get("/reservation", async (req, res) => {
-  res.render("reservation", {
-    logged_in: req.session.logged_in,
-    user_name: req.session.user_name,
-    user_id: req.session.user_id,
-  });
-});
-
 // GET /myStations
-// Render the page with the user's charging stations
+// Render the page to display the logged-in user's charging stations
 router.get("/myStations", withAuth, async (req, res) => {
-  console.log("inside router.get('/myStations')");
   try {
     const dbStationData = await Station.findAll({
       where: { owner_id: req.session.user_id },
@@ -95,6 +86,7 @@ router.get("/myStations", withAuth, async (req, res) => {
 });
 
 // GET /newStation
+// Render the page for user to add a new charging station
 router.get('/newStation', withAuth, async (req,res) => {
   res.render("newStation", {
     logged_in: req.session.logged_in,
@@ -107,7 +99,7 @@ router.get('/newStation', withAuth, async (req,res) => {
 
 
 // GET /myReservations
-// Render the page with the user's reservations
+// Render the page to display the logged-in user's reservations
 router.get("/myReservations", withAuth, async (req,res) => {
   try {
     // find the logged in user by id and JOIN with rented Station data
@@ -127,18 +119,6 @@ router.get("/myReservations", withAuth, async (req,res) => {
   } catch (err) {
     res.status(500).json(err); 
   };
-})
-
-
-
-
-// newReservation
-router.get("/newReservation", (req,res) => {
-  res.render("newReservation", {
-    logged_in: req.session.logged_in,
-    user_name: req.session.user_name,
-    user_id: req.session.user_id
-  });
 })
 
 // GET /newReservations/:id
