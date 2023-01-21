@@ -12,15 +12,6 @@ router.post('/', async (req, res) => {
     res
       .status (200)
       .json(reserveData);
-    // req.session.save(() => {
-    //     req.session.reservation_id = reserveData.id;
-    //     req.session.reservation_date = reserveData.date;
-    //     req.session.reservation_length = reserveData.length;
-    //     req.session.logged_in = true;
-        
-      
-    //       // .json({ message: 'You have successfully reserved!' });
-    // });
   } catch (err) {
     res.status (400).json(err);
   }

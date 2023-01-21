@@ -7,11 +7,7 @@ const reservationFormHandler = async (event) => {
     const reservation_date = document.querySelector('#date-reserve').value.trim();
     const reservation_time = document.querySelector('#length-reserve').value.trim();
     const user_id = document.querySelector('#info-store').dataset.userid.trim();
-  console.log(station_id);
-  console.log(reservation_date);
-  console.log(reservation_time);
-  console.log(user_id);
-  
+   
 
     if (station_id && reservation_date && reservation_time) {
       // Send a POST request to the API endpoint
@@ -22,7 +18,7 @@ const reservationFormHandler = async (event) => {
       });
 
       if (response.ok) {
-        document.location.replace('/'); // ****
+        document.location.replace('/myReservations'); // ****
       } else {
         alert('Failed to create reservation');
       }
