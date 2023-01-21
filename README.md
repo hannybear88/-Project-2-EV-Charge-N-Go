@@ -8,11 +8,13 @@ This app  allows owners of private home chargers to rent out their personal EV c
 * [User Story](#User-Story)
 * [Acceptance Criteria](#Acceptance-Criteria) 
 * [Motivation for Development](#Motivation-for-Development) 
+* [Features](#Features)
 * [Process](#Process) 
 * [Technology](#Technology) 
 * [Tasks and Roles](#Tasks-and-Roles) 
 * [Challenges](#Challenges) 
 * [Successes](#Successes) 
+* [Demo](#Demo) 
 * [Directions for Future Development](#Directions-for-Future-Development) 
 * [Usage](#Usage) 
 * [Support](#Support) 
@@ -25,32 +27,33 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - I WANT an EV Charge N Go site to support the efforts in reducing gas emmissions and increasing electric vehicle use 
 - SO THAT more individuals can have access to owning or using an electric car regardless of installing a home charger themselves or needing to own a home to access 
 - AND SO THAT while traveling out of town, finding stations to reserve in advance to ensure the ability of electric vehicle use 
-- WITHOUT obstacles from conveniences
 
 
 
-# Acceptance Criteria
+# How to Use this Project and Acceptance Criteria
 - GIVEN a EV Charge N Go Site
 - WHEN I visit the site for the first time
-- THEN I am presented homepage, which includes a map and a zip code form to enter your zip code
+- THEN I am presented on a homepage, landing site, which includes a map and a zip code search form
 - WHEN I enter my zip code
 - THEN I am prompted to sign up or login in
 - WHEN I sign up 
 - THEN I must provide an valid email address and password
 - WHEN I am done signing up
 - THEN I am automatically directed to the home page
-- WHEN I am logged in and my username appears on the top right side of the home page
-- THEN I can add a charging startion OR make a reservation
+- WHEN I already have an account
+- THEN I can login using an email and password
+- WHEN I am logged in and my username appears on the top left side of the home page
+- THEN I can select either to view my charging stations, my reservation, search for a station via a zipcode, or add a charging station
 - WHEN I add a charging station
 - THEN I have to fill out the station form
-- WHEN I make a reservation
-- THEN I have to fill out the reservation form
-- WHEN I made the reservation
-- THEN I go to My Reservations
-- WHEN I go to My Reservations
-- THEN all my reservations appear with detail station information, along with date and time of reservation
 - WHEN I go to My Charging Stations
 - THEN all the charging stations I own will appear in one page
+- WHEN I want to make a reservation
+- THEN I have to search for a station and click on reserve and get redirected to fill out the reservation form
+- WHEN a new station is created
+- THEN the new station appears in the site
+- WHEN the reservation is made
+- THEN in My Reservations detail station information, along with date and time of reservation will appear
 - WHEN 
 - THEN 
 - WHEN
@@ -59,6 +62,11 @@ This app  allows owners of private home chargers to rent out their personal EV c
 
 # Motivation for Development
 - We all came to an agreement that EV Charging isnt easily accessible and a gap for EV owners and station owners exists. Therefore allowing owners of stations to rent out home stations and also supporting EV drivers to a wider range of charging access better supports the future mission.  
+
+
+# Features
+
+
 
 
 # Process
@@ -78,6 +86,7 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - Bootstrap
 - CSS3
 - Vanilla Javascript
+- Handlebars
 - Heroku
 - Bcrypt
 - Chalk
@@ -88,9 +97,6 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - Express-handlebars
 - Express-session
 - Sequelize
-
-
-
 
 ## Tasks and Roles
 <!-- - Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars, myReservations.js, reservationRoutes.js, homeRoutes.js, userRoutes.js, homepage.js, reservation.js, main.handlebars, myReservations.handlebars, newReservation.handlebars, reservation.handlebars, helpers.js
@@ -110,17 +116,21 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - duration 
 - rendering registration 
 - correct station id wasn't showing
+- google map API key - has to appear in html, not in dotenv (apply for restricting api key)
+- 
 
 
 
 ## Successes 
 
-- Connecting Google API to application 
+- Connecting Google Maps API to application 
 - Connecting the logged in user to their reservations while also displaying station information
 - Having various icon types for different plug in and level type chargers registered
 - Defining the flow and linkages between the various stages 
 - Connecting the station registration 
 
+
+## Demo
 
 Screenshots of application usage along with links to deployed site below. 
 
@@ -132,6 +142,7 @@ Screenshots of application usage along with links to deployed site below.
 - Ability to delete prior reservations
 - Start and finish time reservation 
 - Calendar view for station 
+- Map key 
 
 ## Long Term Goals
 - Station Reviews
