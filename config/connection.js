@@ -3,6 +3,7 @@ require('dotenv').config();
 
 let sequelize;
 
+// connect and use hidden dotenv information
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
