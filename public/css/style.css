@@ -28,37 +28,14 @@
 .newStation-form,
 .login-form,
 .signup-form,
-.edit-form,
-.new-form,
-.reservation-form,
-.content {
+.reservation-form {
   border: 1px solid var(--primary-medium);
   border-radius: 0 0 var(--boader-radius) var(--boader-radius);
   background-color: var(--primary-light);
 }
 
-.dropdown { 
-  position: relative;
-  display: inline-block;
-  
-}
-
-
-.comment-by {
-  background-color: var(--primary-light);
-}
-
 .sub-heading {
   color: var(--primary-dark);
-}
-
-#btn-add-new-post {
-  background-color: var(--primary-medium);
-  color: var(--white);
-}
-
-#btn-add-new-post:hover {
-  background-color: var(--primary-dark);
 }
 
 /* Google Map */
