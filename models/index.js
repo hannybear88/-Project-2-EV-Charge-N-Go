@@ -28,6 +28,8 @@ Station.belongsToMany(User, {
   as: 'renters'
 });
 
+//-------Future add on--------//
+
 // User.belongsToMany(Station, {
 //   through: {
 //     model: Wishlist,

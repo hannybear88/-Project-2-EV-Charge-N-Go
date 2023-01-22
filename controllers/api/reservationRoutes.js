@@ -16,7 +16,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-// DELETE /api/myReservation/:id
+// DELETE /api/reservation/:id
 // Delete a reservation
 router.delete('/:id', withAuth, async (req, res) => {
   try {
