@@ -183,18 +183,21 @@ Logout:
 # Goals for Future Development
 
 ## Short Term Goals 
-- Comment section
 - Ability to delete prior reservations
 - Start and finish time reservation 
-- Calendar view for station 
+- Reservation Counts
+- Owner view of reservations
 - Map key 
+- Send a "forgot password email"
+- Send a "forgot username email"
 
 ## Long Term Goals
 - Station Reviews
 - Send welcome email to user
 - Ability to chat with owner
-- Owner view of reservations
+- Calendar view for station 
 - Filter options such as price, charger types, etc. 
+
 
 
 # Support
