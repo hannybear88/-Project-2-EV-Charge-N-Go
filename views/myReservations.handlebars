@@ -11,27 +11,35 @@
   </em>
   {{/if}}
 </div>
-{{!-- render if posts are not empty --}}
-{{#if reserved_stations.length}}
-  {{!-- Loop over each object in thed Charging Ste posts array --}}
-  {{#each reserved_stations as |station| }}
-    <div class="row mb-3">
-      <div class="col">
-        <!-- charging station name -->
-        <div class="title px-3 pt-3 pb-2 d-flex justify-content-between align-items-end flex-wrap ">
-          <h3>{{format_date station.reservation.reservation_date}}</h3>
-          <h3>{{format_time station.reservation.reservation_time}}</h3>
-        </div>
+<div id="reservations-container" class="container"> 
+  {{!-- render if posts are not empty --}}
+  {{#if reserved_stations.length}}
+    {{!-- Loop over each object in thed Charging Ste posts array --}}
+    {{#each reserved_stations as |station| }}
+      <div class="row mb-3">
+        <div class="col">
+          <!-- charging station name -->
+          <div class="title px-3 pt-3 pb-2 d-flex justify-content-between align-items-end flex-wrap ">
+            <h3 class="reservation-date">{{format_date station.reservation.reservation_date}}</h3>
+            <h3 class="reservation-time">{{format_time station.reservation.reservation_time}}</h3>
+          </div>
 
-        <!-- charging station details -->
-        <div class="reservation-details px-3 py-2">
-          <h4><span class="fw-bold">{{station.name}}</span></h4>
-          <h6>Address: <span class="fw-bold">{{station.address}} {{station.city}}, {{station.state}} {{station.zip}}</span>
-          </h6>
-          <h6>Station Type: <span class="fw-bold">{{station.station_type}}</span></h6>
-          <h6>Plug in Type: <span class="fw-bold">{{station.plug_in_type}}</span></h6>
+          <!-- charging station details -->
+          <div class="reservation-details px-3 py-2">
+            <h4><span class="fw-bold">{{station.name}}</span></h4>
+            <h6>Address: <span class="fw-bold">{{station.address}} {{station.city}}, {{station.state}} {{station.zip}}</span>
+            </h6>
+            <h6>Station Type: <span class="fw-bold">{{station.station_type}}</span></h6>
+            <div class="d-flex justify-content-between align-items-end flex-wrap">
+              <h6>Plug in Type: <span class="fw-bold">{{station.plug_in_type}}</span></h6>
+              <button   class="btn btn-sm btn-primary" id="btn-cancel-reservation" data-reservation-id={{station.reservation.id}}>
+                Cancel Reservation 
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  {{/each}}
+    {{/each}}
+    <script src="/js/myReservation.js"></script>
 {{/if}}
+</div>
