@@ -231,7 +231,7 @@ Heidi Wu:
 
 Team Collaboration:
     
-    db, models, team suo coding, reviewing, presentation runs
+    db, models, team pseudo coding, reviewing, presentation runs
 
 # Credits and Contributors 
 
