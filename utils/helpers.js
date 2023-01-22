@@ -1,10 +1,8 @@
 module.exports = {
-    format_date: date => {
-        return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-      },
-    format_time: date => {
-        var hours = date.split(':')[0];
-        var minutes = date.split(':')[1];
+    // format time into 12 hour format
+    format_time: time => {
+        var hours = time.split(':')[0];
+        var minutes = time.split(':')[1];
         var ampm = hours >= 12 ? 'pm' : 'am';
         hours = hours % 12;
         hours = hours ? hours : 12; // the hour '0' should be '12'
