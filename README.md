@@ -6,18 +6,17 @@ This app  allows owners of private home chargers to rent out their personal EV c
  
 # Table of Contents
 * [User Story](#User-Story)
-* [Acceptance Criteria](#How-to-Use-this-Project-and-Acceptance-Criteria) 
+* [Acceptance Criteria](#Acceptance-Criteria) 
 * [Motivation for Development](#Motivation-for-Development) 
-* [Features](#Features)
 * [Process](#Process) 
 * [Technology](#Technology) 
 * [Challenges](#Challenges) 
 * [Successes](#Successes) 
-
 * [Usage](#Usage) 
 * [Goals for Future Development](#Goals-for-Future-Development) 
 * [Support](#Support) 
-* [Credits](#Credits-Contributors) 
+* [Deployed Site](#Deploye-Site)
+* [Credits and Contributors](#Credits-and-Contributors) 
 * [Tasks and Roles](#Tasks-and-Roles) 
 
 
@@ -29,7 +28,7 @@ This app  allows owners of private home chargers to rent out their personal EV c
 
 
 
-# How to Use this Project and Acceptance Criteria
+# Acceptance Criteria
 - GIVEN a EV Charge N Go Site
 - WHEN I visit the site for the first time
 - THEN I am presented on a homepage, landing site, which includes a map and a zip code search form
@@ -59,11 +58,6 @@ This app  allows owners of private home chargers to rent out their personal EV c
 
 # Motivation for Development
 - We all came to an agreement that EV Charging isnt easily accessible and a gap for EV owners and station owners exists. This application allows personal station owners to advertise their stations for reservations and in parallel supporting EV ease of access initiative to a wider range of the community for ease of access supporting EV's future mission.  
-
-
-# Features
-
-
 
 
 # Process
