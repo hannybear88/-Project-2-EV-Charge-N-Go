@@ -202,7 +202,7 @@ If you need support or have any questions about the repo, please [open an issue]
 
 # Deployed Site
 
-[Site Link](https://ev-charge-n-go.herokuapp.com/) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://ev-charge-n-go.herokuapp.com/)
 
 You can find more of our work on our GitHub, [hannybear88](https://github.com/hannybear88/), [heidiwu3388](https://github.com/heidiwu3388), [TrianaD](https://github.com/TrianaD), [fmaldmed](https://github.com/fmaldmed).
 
