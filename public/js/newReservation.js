@@ -18,7 +18,7 @@ const reservationFormHandler = async (event) => {
       });
 
       if (response.ok) {
-        document.location.replace('/myReservations'); // ****
+        document.location.replace('/myReservations');
       } else {
         alert('Failed to create reservation');
       }
