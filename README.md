@@ -98,7 +98,7 @@ This app  allows owners of private home chargers to rent out their personal EV c
 ## Challenges
 - Trim error in reservation and station javascript
 
-    -- reseration.js 
+    -- reservation.js 
 
     -- station.js
 <!-- <!-- reserve a length of reservation -->
@@ -204,7 +204,7 @@ If you need support or have any questions about the repo, please [open an issue]
 
 [Site Link](https://ev-charge-n-go.herokuapp.com/) 
 
-<!-- You can find more of our work on our GitHub, [hannybear88](https://github.com/hannybear88/), [heidiwu3388](https://github.com/heidiwu3388), [TrianaD](https://github.com/TrianaD), [fmaldmed](https://github.com/fmaldmed). -->
+You can find more of our work on our GitHub, [hannybear88](https://github.com/hannybear88/), [heidiwu3388](https://github.com/heidiwu3388), [TrianaD](https://github.com/TrianaD), [fmaldmed](https://github.com/fmaldmed).
 
 
 
@@ -219,8 +219,8 @@ If you need support or have any questions about the repo, please [open an issue]
 
 Hannah Chung: 
     
-    Focus: Login, Logout, and Signup
-    Support: myReservation, README, Presentation
+    Focus: Login, Logout, Signup,myReservations
+    Support: Reservation, README, Presentation, Trello
 
 Triana Deguzman: 
     
@@ -241,11 +241,5 @@ Team Collaboration:
     
     db, models, team suo coding, reviewing, presentation runs
 
-<!-- - Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars, myReservations.js, reservationRoutes.js, homeRoutes.js, userRoutes.js, homepage.js, reservation.js, main.handlebars, myReservations.handlebars, newReservation.handlebars, reservation.handlebars, helpers.js
-- Heidi Wu: Google API, homeRoutes.js, userRoutes.js, login.js, logout.js, signup.js, css, userData.json, login.handlebars, signup.handlebars, stationData.json, seed.js
-- Triana Deguzman: reservation.handlebars,reservation.js, homeRoutes.js, userRoutes.js, reservationData.json, userData.json
-- Fernando Maldonado: homeRoutes.js, userRoutes.js, newStations.handelbars,myStation.handlebars
-- Everyone: db and models
-- README: Hannah and Triana
-- Presentation slides: Triana and Hannah -->
+
 
