@@ -15,9 +15,9 @@ This app  allows owners of private home chargers to rent out their personal EV c
 * [Usage](#Usage) 
 * [Goals for Future Development](#Goals-for-Future-Development) 
 * [Support](#Support) 
-* [Deployed Site](#Deploye-Site)
-* [Credits and Contributors](#Credits-and-Contributors) 
+* [Deployed Site](#Deploye-Site) 
 * [Tasks and Roles](#Tasks-and-Roles) 
+* [Credits and Contributors](#Credits-and-Contributors)
 
 
 # User-Story 
@@ -98,7 +98,7 @@ This app  allows owners of private home chargers to rent out their personal EV c
 ## Challenges
 - Trim error in reservation and station javascript
 
-    -- reseration.js 
+    -- reservation.js 
 
     -- station.js
 <!-- <!-- reserve a length of reservation -->
@@ -200,27 +200,19 @@ Logout:
 # Support
 If you need support or have any questions about the repo, please [open an issue](https://github.com/hannybear88/-Project-2-EV-Charge-N-Go/issues) or contact us via email at evchargengo.p2@gmail.com. 
 
-## Deployed Site
+# Deployed Site
 
 [Site Link](https://ev-charge-n-go.herokuapp.com/) 
 
-<!-- You can find more of our work on our GitHub, [hannybear88](https://github.com/hannybear88/), [heidiwu3388](https://github.com/heidiwu3388), [TrianaD](https://github.com/TrianaD), [fmaldmed](https://github.com/fmaldmed). -->
+You can find more of our work on our GitHub, [hannybear88](https://github.com/hannybear88/), [heidiwu3388](https://github.com/heidiwu3388), [TrianaD](https://github.com/TrianaD), [fmaldmed](https://github.com/fmaldmed).
 
 
-
-# Credits and Contributors 
-
-- Hannah Chung
-- Triana Deguzman
-- Fernando Maldonado
-- Heidi Wu
-
-## Tasks and Roles
+# Tasks and Roles
 
 Hannah Chung: 
     
-    Focus: Login, Logout, and Signup
-    Support: myReservation, README, Presentation
+    Focus: Login, Logout, Signup,myReservations
+    Support: Reservation, README, Presentation, Trello
 
 Triana Deguzman: 
     
@@ -241,11 +233,10 @@ Team Collaboration:
     
     db, models, team suo coding, reviewing, presentation runs
 
-<!-- - Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars, myReservations.js, reservationRoutes.js, homeRoutes.js, userRoutes.js, homepage.js, reservation.js, main.handlebars, myReservations.handlebars, newReservation.handlebars, reservation.handlebars, helpers.js
-- Heidi Wu: Google API, homeRoutes.js, userRoutes.js, login.js, logout.js, signup.js, css, userData.json, login.handlebars, signup.handlebars, stationData.json, seed.js
-- Triana Deguzman: reservation.handlebars,reservation.js, homeRoutes.js, userRoutes.js, reservationData.json, userData.json
-- Fernando Maldonado: homeRoutes.js, userRoutes.js, newStations.handelbars,myStation.handlebars
-- Everyone: db and models
-- README: Hannah and Triana
-- Presentation slides: Triana and Hannah -->
+# Credits and Contributors 
+
+- Hannah Chung
+- Triana Deguzman
+- Fernando Maldonado
+- Heidi Wu
 
