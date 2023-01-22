@@ -15,9 +15,9 @@ This app  allows owners of private home chargers to rent out their personal EV c
 * [Usage](#Usage) 
 * [Goals for Future Development](#Goals-for-Future-Development) 
 * [Support](#Support) 
-* [Deployed Site](#Deploye-Site)
-* [Credits and Contributors](#Credits-and-Contributors) 
+* [Deployed Site](#Deploye-Site) 
 * [Tasks and Roles](#Tasks-and-Roles) 
+* [Credits and Contributors](#Credits-and-Contributors)
 
 
 # User-Story 
@@ -200,22 +200,14 @@ Logout:
 # Support
 If you need support or have any questions about the repo, please [open an issue](https://github.com/hannybear88/-Project-2-EV-Charge-N-Go/issues) or contact us via email at evchargengo.p2@gmail.com. 
 
-## Deployed Site
+# Deployed Site
 
 [Site Link](https://ev-charge-n-go.herokuapp.com/) 
 
 You can find more of our work on our GitHub, [hannybear88](https://github.com/hannybear88/), [heidiwu3388](https://github.com/heidiwu3388), [TrianaD](https://github.com/TrianaD), [fmaldmed](https://github.com/fmaldmed).
 
 
-
-# Credits and Contributors 
-
-- Hannah Chung
-- Triana Deguzman
-- Fernando Maldonado
-- Heidi Wu
-
-## Tasks and Roles
+# Tasks and Roles
 
 Hannah Chung: 
     
@@ -241,5 +233,10 @@ Team Collaboration:
     
     db, models, team suo coding, reviewing, presentation runs
 
+# Credits and Contributors 
 
+- Hannah Chung
+- Triana Deguzman
+- Fernando Maldonado
+- Heidi Wu
 
