@@ -48,6 +48,8 @@ Station.init(
       type: DataTypes.DECIMAL(7,4),
       allowNull: false,
     },
+
+    //------Future Add On------//
     // reservation_counts: {
     //   type: DataTypes.INTEGER,
     //   allowNull: false,

@@ -1,25 +1,24 @@
-# Project-2
-PROJECT #2
+# EV Charge n Go
+Project #2
 
 # Project Description
 This app  allows owners of private home chargers to rent out their personal EV chargers to others by location, reservations, and duration of use with an owner fixed rate.
  
 # Table of Contents
 * [User Story](#User-Story)
-* [Acceptance Criteria](#Acceptance-Criteria) 
+* [Acceptance Criteria](#How-to-Use-this-Project-and-Acceptance-Criteria) 
 * [Motivation for Development](#Motivation-for-Development) 
 * [Features](#Features)
 * [Process](#Process) 
 * [Technology](#Technology) 
-* [Tasks and Roles](#Tasks-and-Roles) 
 * [Challenges](#Challenges) 
 * [Successes](#Successes) 
-* [Demo](#Demo) 
-* [Directions for Future Development](#Directions-for-Future-Development) 
+
 * [Usage](#Usage) 
+* [Goals for Future Development](#Goals-for-Future-Development) 
 * [Support](#Support) 
-* [Credits](#Credits) 
-* [Contributors](#Contributors) 
+* [Credits](#Credits-Contributors) 
+* [Tasks and Roles](#Tasks-and-Roles) 
 
 
 # User-Story 
@@ -37,31 +36,29 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - WHEN I enter my zip code
 - THEN I am prompted to sign up or login in
 - WHEN I sign up 
-- THEN I must provide an valid email address and password
+- THEN I must provide a valid email address and password
 - WHEN I am done signing up
 - THEN I am automatically directed to the home page
 - WHEN I already have an account
 - THEN I can login using an email and password
 - WHEN I am logged in and my username appears on the top left side of the home page
-- THEN I can select either to view my charging stations, my reservation, search for a station via a zipcode, or add a charging station
+- THEN I can select either to view My Charging Stations, My Reservation, search for a station via a zipcode, or add a charging station (+ Station)
+- WHEN I want to make a modification to My Reservations
+- THEN select Cancel Reservation to remove from que
 - WHEN I add a charging station
-- THEN I have to fill out the station form
+- THEN I have to fill out the station form with station name, station address, station type, and plug in types
 - WHEN I go to My Charging Stations
 - THEN all the charging stations I own will appear in one page
 - WHEN I want to make a reservation
-- THEN I have to search for a station and click on reserve and get redirected to fill out the reservation form
-- WHEN a new station is created
-- THEN the new station appears in the site
+- THEN I have to search for a station and click on reserve to get redirected to fill out the reservation form with date and time of reservation
 - WHEN the reservation is made
 - THEN in My Reservations detail station information, along with date and time of reservation will appear
-- WHEN 
-- THEN 
-- WHEN
-- THEN
+- WHEN I select Logout 
+- THEN I am logged out of the site
 
 
 # Motivation for Development
-- We all came to an agreement that EV Charging isnt easily accessible and a gap for EV owners and station owners exists. Therefore allowing owners of stations to rent out home stations and also supporting EV drivers to a wider range of charging access better supports the future mission.  
+- We all came to an agreement that EV Charging isnt easily accessible and a gap for EV owners and station owners exists. This application allows personal station owners to advertise their stations for reservations and in parallel supporting EV ease of access initiative to a wider range of the community for ease of access supporting EV's future mission.  
 
 
 # Features
@@ -75,8 +72,9 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - Worked together creating the models
 - Models helped define the various work packages and tasks required to complete the project
 - Assigned tasks to team members
-- Lots of collaboration throughout
-    - working together via zooms, meetings, slack, etc to help with suo coding and/or brainstorming how to effectively move ahead in the process
+- High collaboration throughout
+    - Working together via zooms, meetings, slack, etc to help with suo coding and/or brainstorming how to effectively move ahead in the process
+- Set team goals and reasses as needed throughout
 
 
 
@@ -97,27 +95,24 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - Express-handlebars
 - Express-session
 - Sequelize
+- Google Maps API
 
-## Tasks and Roles
-<!-- - Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars, myReservations.js, reservationRoutes.js, homeRoutes.js, userRoutes.js, homepage.js, reservation.js, main.handlebars, myReservations.handlebars, newReservation.handlebars, reservation.handlebars, helpers.js
-- Heidi Wu: Google API, homeRoutes.js, userRoutes.js, login.js, logout.js, signup.js, css, userData.json, login.handlebars, signup.handlebars, stationData.json, seed.js
-- Triana Deguzman: reservation.handlebars,reservation.js, homeRoutes.js, userRoutes.js, reservationData.json, userData.json
-- Fernando Maldonado: homeRoutes.js, userRoutes.js, newStations.handelbars,myStation.handlebars
-- Everyone: db and models
-- README: Hannah and Triana
-- Presentation slides: Triana and Hannah -->
+
 
 
 
 ## Challenges
-<!-- trim error -- making a reservation-->
-- reseration.js 
-<!-- reserve a length of reservation -->
-- duration 
-- rendering registration 
-- correct station id wasn't showing
-- google map API key - has to appear in html, not in dotenv (apply for restricting api key)
-- 
+- Trim error in reservation and station javascript
+
+    -- reseration.js 
+
+    -- station.js
+<!-- <!-- reserve a length of reservation -->
+- Adding time duration for reservations 
+- Rendering registration 
+- Correct station id wasn't showing
+- Google map API key - has to appear in html, not in dotenv (apply for restricting api key)
+
 
 
 
@@ -130,12 +125,68 @@ This app  allows owners of private home chargers to rent out their personal EV c
 - Connecting the station registration 
 
 
-## Demo
-
-Screenshots of application usage along with links to deployed site below. 
 
 
-# Directions for Future Development
+
+# Usage
+
+The following screenshots show examples of the interaction and options presented to the user when application is initiated. 
+
+Homepage:
+
+![showing homepage](./public/assets/images/homepage1.png)
+
+Searching:
+
+![showing search function](./public/assets/images/homepageSearch.png)
+
+Below shows the key to the map and what the different icons/numbers represent in the map:
+
+![showing key to the map icons](./public/assets/images/MapKey.png)
+
+In order to make a reservation, click on the "Reserve Station" as seen in image:
+
+![showing reserve station](./public/assets/images/MapSelection.png)
+
+
+Required Login to make new reservation(s) or register a new charging station: 
+
+![showing login table](./public/assets/images/login1.png)
+
+If no account has been created, a signup option is available on the bottom of the login where the sign up page will appear: 
+
+![showing signup table](./public/assets/images/signup1.png)
+
+Detail Reservation: 
+
+![showing detail reservation](./public/assets/images/reservationselection.png)
+
+Viewing User Reservation(s) "My Reservations": 
+
+![showing reservations for user](./public/assets/images/myreservations2.png)
+
+- To make modification to reservation and remove click on "Cancel Reservation": 
+
+![showing how to cancel reservation](./public/assets/images/ModifyReservation.png)
+
+- If no reservations have been made by the user the following will appear: 
+
+![showing no reservations view](./public/assets/images/noreservations.png)
+
+
+Viewing User Charging Stations "My Charging Stations": 
+
+![showing charging stations owned by user](./public/assets/images/mychargingstations.png)
+
+Registering a new charging station: 
+
+![showing how to register a charging station](./public/assets/images/registerstation.png)
+
+Logout: 
+
+![showing where logout is located](./public/assets/images/Logout.png)
+
+# Goals for Future Development
 
 ## Short Term Goals 
 - Comment section
@@ -148,83 +199,59 @@ Screenshots of application usage along with links to deployed site below.
 - Station Reviews
 - Send welcome email to user
 - Ability to chat with owner
+- Owner view of reservations
 - Filter options such as price, charger types, etc. 
-
-
-# Usage
-
-The following screenshots show examples of the interaction and options presented to the user when application is initiated. 
-
-Homepage:
-
-![showing prompt initial options](./public/assets/images/homepage1.png)
-
-Searching:
-
-![showing prompt initial options](./public/assets/images/homepageSearch.png)
-
-Below shows the key to the map and what the different icons/numbers represent in the map:
-
-![showing prompt initial options](./public/assets/images/MapKey.png)
-
-In order to make a reservation, click on the "Reserve Station" as seen in image:
-
-![showing prompt initial options](./public/assets/images/MapSelection.png)
-
-
-Required Login to make new reservation(s) or register a new charging station: 
-
-![showing prompt initial options](./public/assets/images/login1.png)
-
-If no account has been created, a signup option is available on the bottom of the login where the sign up page will appear: 
-
-![showing prompt initial options](./public/assets/images/signup1.png)
-
-Detail Reservation: 
-
-![showing prompt initial options](./public/assets/images/reservationselection.png)
-
-Viewing User Reservation(s) "My Reservations": 
-
-![showing prompt initial options](./public/assets/images/myreservations2.png)
-
-- If no reservations have been made by the user the following will appear: 
-
-![showing prompt initial options](./public/assets/images/noreservations.png)
-
-
-Viewing User Charging Stations "My Charging Stations": 
-
-![showing prompt initial options](./public/assets/images/mychargingstations.png)
-
-Registering a new charging station: 
-
-![showing prompt initial options](./public/assets/images/registerstation.png)
-
-Logout: 
-
-![showing prompt initial options](./public/assets/images/Logout.png)
-
 
 
 # Support
 If you need support or have any questions about the repo, please [open an issue](https://github.com/hannybear88/-Project-2-EV-Charge-N-Go/issues) or contact us via email at evchargengo.p2@gmail.com. 
 
+## Deployed Site
+
+[Site Link](https://ev-charge-n-go.herokuapp.com/) 
+
 <!-- You can find more of our work on our GitHub, [hannybear88](https://github.com/hannybear88/), [heidiwu3388](https://github.com/heidiwu3388), [TrianaD](https://github.com/TrianaD), [fmaldmed](https://github.com/fmaldmed). -->
 
 
 
-# Credits
+# Credits and Contributors 
 
 - Hannah Chung
-- Heidi Wu
 - Triana Deguzman
 - Fernando Maldonado
-
-
-# Contributors
-
-- Hannah Chung
 - Heidi Wu
-- Triana Deguzman
-- Fernando Maldonado
+
+## Tasks and Roles
+
+Hannah Chung: 
+    
+    Focus: Login, Logout, and Signup
+    Support: myReservation, README, Presentation
+
+Triana Deguzman: 
+    
+    Focus: Reservations, Reservation Seeds
+    Support: README, Presentation, Trello Coordination
+
+Fernando Maldonado: 
+    
+    Focus: Stations new and myStations 
+    Support: Geo coordinates 
+
+Heidi Wu: 
+    
+    Focus: Homepage, Google Maps, User and Station Seeds
+    Support: myStations, and across all files
+
+Team Collaboration:
+    
+    db, models, team suo coding, reviewing, presentation runs
+
+<!-- - Hannah Chung: login.js, logout.js, signup.js, login.handlebars, signup.handlebars, myReservations.js, reservationRoutes.js, homeRoutes.js, userRoutes.js, homepage.js, reservation.js, main.handlebars, myReservations.handlebars, newReservation.handlebars, reservation.handlebars, helpers.js
+- Heidi Wu: Google API, homeRoutes.js, userRoutes.js, login.js, logout.js, signup.js, css, userData.json, login.handlebars, signup.handlebars, stationData.json, seed.js
+- Triana Deguzman: reservation.handlebars,reservation.js, homeRoutes.js, userRoutes.js, reservationData.json, userData.json
+- Fernando Maldonado: homeRoutes.js, userRoutes.js, newStations.handelbars,myStation.handlebars
+- Everyone: db and models
+- README: Hannah and Triana
+- Presentation slides: Triana and Hannah -->
+
