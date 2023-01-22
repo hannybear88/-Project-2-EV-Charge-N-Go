@@ -4,6 +4,8 @@ const sequelize = require('../config/connection');
 // Wishlist model
 class Wishlist extends Model {}
 
+//-------Future add on--------//
+
 // fields/columns for Wishlist model
 
 Wishlist.init(
