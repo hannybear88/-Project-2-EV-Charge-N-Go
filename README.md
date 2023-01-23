@@ -9,13 +9,13 @@ This app  allows owners of private home chargers to rent out their personal EV c
 * [Acceptance Criteria](#Acceptance-Criteria) 
 * [Motivation for Development](#Motivation-for-Development) 
 * [Process](#Process) 
-* [Technology](#Technology) 
+* [Technologies Used](#Technology-Used) 
 * [Challenges](#Challenges) 
 * [Successes](#Successes) 
 * [Usage](#Usage) 
 * [Goals for Future Development](#Goals-for-Future-Development) 
 * [Support](#Support) 
-* [Deployed Site](#Deploye-Site) 
+* [Deployed Site](#Deployed-Site) 
 * [Tasks and Roles](#Tasks-and-Roles) 
 * [Credits and Contributors](#Credits-and-Contributors)
 
@@ -72,24 +72,34 @@ This app  allows owners of private home chargers to rent out their personal EV c
 
 
 
-## Technology
-- Trello was used to help define tasks, schedule, and ownership throughout the different phases of the project.
-- HTML5
-- Bootstrap
-- CSS3
-- Vanilla Javascript
-- Handlebars
-- Heroku
-- Bcrypt
-- Chalk
-- Handlebars.js
-- connect-session- sequelize
-- Dotenv
-- Express
-- Express-handlebars
-- Express-session
-- Sequelize
-- Google Maps API
+## Technologies Used 
+![Technologies](https://img.shields.io/badge/Trello-F7DF1E?style=for-the-badge&logo=trello&logoColor=purple) was used to help define tasks, schedule, and ownership throughout the different phases of the project.
+
+![Technologies](https://img.shields.io/badge/HTML5-F7DF1E?style=for-the-badge&logo=html5&logoColor=blue)
+![Technologies](https://img.shields.io/badge/CSS3-F7DF1E?style=for-the-badge&logo=css3&logoColor=green)
+![Technologies](https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Technologies](https://img.shields.io/badge/bootstrap-F7DF1E?style=for-the-badge&logo=Bootstrap&logoColor=red)
+![Technologies](https://img.shields.io/badge/-JSON-blue)
+![Technologies](https://img.shields.io/badge/Heroku-purple)
+![Technologies](https://img.shields.io/badge/Bcrypt-green)
+![Technologies](https://img.shields.io/badge/Handelbars.js-orange)
+![Technologies](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
+![Technologies](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
+![Technologies](https://img.shields.io/badge/SQL2-orange)
+![Technologies](https://img.shields.io/badge/ConnectionSessionSequelize-yellowgreen)
+![Technologies](https://img.shields.io/badge/Dotenv-yellow)
+![Technologies](https://img.shields.io/badge/Express-green)
+![Technologies](https://img.shields.io/badge/Express-handlebars-blueviolet)
+![Technologies](https://img.shields.io/badge/Express-Session-orange)
+![Technologies](https://img.shields.io/badge/Sequalize-blue)
+![Technologies](https://img.shields.io/badge/GoogleMaps-API-blue)
+
+
+
+
+
+
+
 
 
 
@@ -183,18 +193,21 @@ Logout:
 # Goals for Future Development
 
 ## Short Term Goals 
-- Comment section
 - Ability to delete prior reservations
 - Start and finish time reservation 
-- Calendar view for station 
+- Reservation Counts
+- Owner view of reservations
 - Map key 
+- Send a "forgot password email"
+- Send a "forgot username email"
 
 ## Long Term Goals
 - Station Reviews
 - Send welcome email to user
 - Ability to chat with owner
-- Owner view of reservations
+- Calendar view for station 
 - Filter options such as price, charger types, etc. 
+
 
 
 # Support
